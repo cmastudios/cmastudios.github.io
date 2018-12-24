@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Connor's Technical Site - Computer Vision</title><link href="https://cmastudios.github.io/" rel="alternate"></link><link href="https://cmastudios.github.io/feeds/computer-vision.atom.xml" rel="self"></link><id>https://cmastudios.github.io/</id><updated>2017-02-28T22:08:47+00:00</updated><entry><title>Object Detection with DIGITS and Caffe</title><link href="https://cmastudios.github.io/2017/02/28/object-detection-with-digits-and-caffe/" rel="alternate"></link><published>2017-02-28T22:08:47+00:00</published><updated>2017-02-28T22:08:47+00:00</updated><author><name>Connor Monahan</name></author><id>tag:cmastudios.github.io,2017-02-28:/2017/02/28/object-detection-with-digits-and-caffe/</id><summary type="html">&lt;p&gt;This is a simplified version of the notes I took while creating and training a neural network to detect balls in the FRC 2017 game. This will be further updated with additional detail as time allows.&lt;/p&gt;
+&lt;p&gt;Requirements: Vatic, DIGITS, NvCaffe&lt;/p&gt;
+&lt;p&gt;An input data set of images with the object for …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is a simplified version of the notes I took while creating and training a neural network to detect balls in the FRC 2017 game. This will be further updated with additional detail as time allows.&lt;/p&gt;
+&lt;p&gt;Requirements: Vatic, DIGITS, NvCaffe&lt;/p&gt;
+&lt;p&gt;An input data set of images with the object for detection in the target environment needs to be captured. About one minute of HD video at 30 FPS should be sufficient.&lt;/p&gt;
+&lt;p&gt;In order for DetectNet to find the location of the bounding boxes, it needs to know the ground truth position and location of these in the training data set. Vatic can be used for this process as it will allow for the division of effort of annotating the objects in the images between multiple individuals, and it requires very little training of the operators.&lt;/p&gt;
+&lt;p&gt;The output.txt file produced by vatic details the bounding box locations for each frame of the input image. A python script is then used to extract the frame numbers and dimensions from this file and build the folder structure demanded by DetectNet, which is the same as the KITTI data set. The layout appears as follows:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;./train
+./train/images
+./train/images/00001.jpg
+./train/labels
+./train/labels/00001.txt
+./val
+./val/images
+./val/images/00001.jpg
+./val/labels
+./val/labels/00001.txt
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;In DIGITS, create a new object detection data set with the folders as described above. In order to use the original DetectNet network without modification, adjust the padding and resize options so the final output size is 1248&amp;#215;384. For images with heights greater than 384, this may first involve padding to fit the image to a 3.25 aspect ratio followed by a resize. The remainder of the settings here can be left as default, and modification of custom classes can be avoided by simply using class names from the KITTI dataset, such as car or pedestrian for the new input.&lt;/p&gt;
+&lt;p&gt;Then, create a new object detection model from this dataset. Set training epochs to 100, batch size to the graphics card&amp;#8217;s limits (a batch size of 10 requires 12 GB of dedicated video memory), solver type to Adam, learning rate to 0.0001, and policy to exponential decay. Disable mean image subtraction. Choose custom network and paste &lt;a href="https://raw.githubusercontent.com/NVIDIA/caffe/caffe-0.15/examples/kitti/detectnet_network.prototxt"&gt;the contents of the reference DetectNet network&lt;/a&gt;. To speed learning, &lt;a href="http://dl.caffe.berkeleyvision.org/bvlc_googlenet.caffemodel"&gt;download the pretrained weights for the GoogLeNet network&lt;/a&gt; to the computer running DIGITS and set the path below accordingly. Click create to begin training.&lt;/p&gt;
+&lt;p&gt;The model will begin training, and may take hours even on top of the line graphics cards. The output named mAP is close to percentage accuracy for this task and it will increase from zero if the model is learning.&lt;/p&gt;
+&lt;p&gt;Final output:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Image of ball on field with red rectangle drawn due to its being recognized by the algorithm" src="https://cmastudios.github.io/images/visual-300x160.png"&gt;&lt;/p&gt;</content><category term="robotics"></category><category term="FRC"></category></entry><entry><title>OpenCV Installation Guide</title><link href="https://cmastudios.github.io/2016/09/14/opencv-installation-guide/" rel="alternate"></link><published>2016-09-14T00:38:16+00:00</published><updated>2016-09-14T00:38:16+00:00</updated><author><name>Connor Monahan</name></author><id>tag:cmastudios.github.io,2016-09-14:/2016/09/14/opencv-installation-guide/</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;Uncategorized
+format: link&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;This guide goes over the installation of OpenCV 3 on Ubuntu.&lt;/p&gt;
+&lt;blockquote data-secret="WW8H7fjNEa" class="wp-embedded-content"&gt;
+  &lt;p&gt;
+    &lt;a href="http://www.pyimagesearch.com/2015/06/22/install-opencv-3-0-and-python-2-7-on-ubuntu/"&gt;Install OpenCV 3.0 and Python 2.7+ on Ubuntu&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/blockquote&gt;</summary><content type="html">&lt;ul&gt;
+&lt;li&gt;Uncategorized
+format: link&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;This guide goes over the installation of OpenCV 3 on Ubuntu.&lt;/p&gt;
+&lt;blockquote data-secret="WW8H7fjNEa" class="wp-embedded-content"&gt;
+  &lt;p&gt;
+    &lt;a href="http://www.pyimagesearch.com/2015/06/22/install-opencv-3-0-and-python-2-7-on-ubuntu/"&gt;Install OpenCV 3.0 and Python 2.7+ on Ubuntu&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/blockquote&gt;</content></entry><entry><title>Computer vision for controller-less robot control</title><link href="https://cmastudios.github.io/2014/05/16/computer-vision-for-controller-less-robot-control/" rel="alternate"></link><published>2014-05-16T21:04:32+00:00</published><updated>2014-05-16T21:04:32+00:00</updated><author><name>Connor Monahan</name></author><id>tag:cmastudios.github.io,2014-05-16:/2014/05/16/computer-vision-for-controller-less-robot-control/</id><summary type="html">&lt;p&gt;It is legal (currently) to use computer vision of humans during autonomous mode to command a robot in FRC. This has been accomplished before by other teams, such as The Cheesy Poofs. We designed a different algorithm that allows for control of speed as well.&lt;/p&gt;
+&lt;p&gt;The Ratchet Rockers have designed …&lt;/p&gt;</summary><content type="html">&lt;p&gt;It is legal (currently) to use computer vision of humans during autonomous mode to command a robot in FRC. This has been accomplished before by other teams, such as The Cheesy Poofs. We designed a different algorithm that allows for control of speed as well.&lt;/p&gt;
+&lt;p&gt;The Ratchet Rockers have designed two different methods to accomplish this control. The first one implemented resembles 254&amp;#8217;s more directly as it is OpenCV. It searches for an object (via color threshold) and uses its position to determine the speed and direction of the robot. This has been tested to work reliably.&lt;/p&gt;
+&lt;p&gt;We also worked on a similar method later using skeleton tracking. One hand tracked works the same way as the previous solution. The other can be used to send specific action commands to, for example, launch a ball at the target. There are some irregularities that occur if the program has been running long, which we haven&amp;#8217;t been able to overcome yet. This program is alternatively written in C#.NET using Microsoft&amp;#8217;s own kinect libraries on windows. We don&amp;#8217;t have confirmed results on the robot yet, but it uses the same protocol as the previous solution.&lt;/p&gt;
+&lt;p&gt;Even in the off season time of summer, our team 1706 continues productivity in vision and control solutions.&lt;/p&gt;</content><category term="kinect"></category><category term="skeleton"></category><category term="robotics"></category><category term="FRC"></category></entry></feed>

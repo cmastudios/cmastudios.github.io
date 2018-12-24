@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Connor's Technical Site - Research</title><link href="https://cmastudios.github.io/" rel="alternate"></link><link href="https://cmastudios.github.io/feeds/research.atom.xml" rel="self"></link><id>https://cmastudios.github.io/</id><updated>2017-02-15T22:43:21+00:00</updated><entry><title>Predicting the Presence of Cancer in Medical Images using Convolutional Neural Networks</title><link href="https://cmastudios.github.io/2017/02/15/predicting-the-presence-of-cancer-in-medical-images-using-convolutional-neural-networks/" rel="alternate"></link><published>2017-02-15T22:43:21+00:00</published><updated>2017-02-15T22:43:21+00:00</updated><author><name>Connor Monahan</name></author><id>tag:cmastudios.github.io,2017-02-15:/2017/02/15/predicting-the-presence-of-cancer-in-medical-images-using-convolutional-neural-networks/</id><summary type="html">&lt;p&gt;Paper submitted to Missouri Junior Science, Engineering, and Humanities Symposium for 2017&lt;/p&gt;
+&lt;p&gt;Abstract:&lt;/p&gt;
+&lt;p&gt;Convolutional neural networks model human brain activity from sensory inputs and have been applied to various activities such as driving cars, recognizing speech, and playing complex games. These machine learning algorithms gained popularity in recent years as …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Paper submitted to Missouri Junior Science, Engineering, and Humanities Symposium for 2017&lt;/p&gt;
+&lt;p&gt;Abstract:&lt;/p&gt;
+&lt;p&gt;Convolutional neural networks model human brain activity from sensory inputs and have been applied to various activities such as driving cars, recognizing speech, and playing complex games. These machine learning algorithms gained popularity in recent years as an effective method for pattern recognition. This paper proposes a novel convolutional neural network architecture to detect lung cancer in radiographic images. Given that patients routinely have x-rays taken for pre-emptive health screenings, and the growing amount of medical data from these imaging procedures, the need for automated detections of abnormalities increases. The solution used a dataset of labeled x-ray images of patients with confirmed instances of lung cancer combined with an equal set of cancer-free patients. The network relied on rectified linear unit activations and dropout to reduce overfitting. Then, this neural network model was trained with a standard backpropagation algorithm with an Adam optimizer using softmax regression. This model demonstrated a 91% accuracy rate on lung cancer chest x-rays.&lt;/p&gt;
+&lt;p&gt;Cite:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;@article{monahan2017,
+title = {Predicting the Presence of Cancer in Medical Images using Convolutional Neural Networks},
+author = {Monahan, Connor},
+note = {preprint on webpage at \url{connormonahan.net}},
+year = {2017}
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href="https://cmastudios.github.io/pdfs/Predicting-the-Presence-of-Cancer-in-Medical-Images-using-Convolutional-Neural-Networks.pdf"&gt;Article (PDF)&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Depth Image Segmentation Using Statistical Methods</title><link href="https://cmastudios.github.io/2016/01/10/depth-image-segmentation-using-statistical-methods/" rel="alternate"></link><published>2016-01-10T00:00:00-06:00</published><updated>2016-01-10T00:00:00-06:00</updated><author><name>Connor Monahan</name></author><id>tag:cmastudios.github.io,2016-01-10:/2016/01/10/depth-image-segmentation-using-statistical-methods/</id><summary type="html">&lt;p&gt;Paper presented to the Junior Science, Engineering, and Humanities Symposium at Maryville University in 2016.&lt;/p&gt;
+&lt;p&gt;Abstract:&lt;/p&gt;
+&lt;p&gt;This paper presents an algorithm that utilizes unsupervised machine learning methods for
+classifying n-objects in a spatial image. Other methods of spatial image segmentation, for
+example the Laplacian operator and support vector machines (SVM …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Paper presented to the Junior Science, Engineering, and Humanities Symposium at Maryville University in 2016.&lt;/p&gt;
+&lt;p&gt;Abstract:&lt;/p&gt;
+&lt;p&gt;This paper presents an algorithm that utilizes unsupervised machine learning methods for
+classifying n-objects in a spatial image. Other methods of spatial image segmentation, for
+example the Laplacian operator and support vector machines (SVM), solely return all visible
+edges within the image, which can then be used to find all objects within the frame; however,
+this algorithm returns all points belonging to a specific object in the image rather than the edges
+of the entire image. This allows the omission of further processing and categorizes all the present
+data into classes using a modification of the Otsu thresholding method, by using a spatial metric
+and optimizing the local minimum to the partial derivative of an n-modal distribution.
+Implementation of the algorithm can be specialized to work on any list of points, such as an
+entire image or a region of an image. The results of the algorithm return distinct information for
+each object in the image, allowing further processing to determine other characteristics about the
+object, such as the orientation.&lt;/p&gt;
+&lt;p&gt;Cite:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;{% raw %}
+@article{monahan2016,
+title = {Depth Image Segmentation Using Statistical Methods},
+author = {Monahan, Connor},
+note = {preprint on webpage at \url{connormonahan.net}},
+year = {2016}
+}
+{% endraw %}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href="https://cmastudios.github.io/pdfs/Depth-Image-Segmentation-Using-Statistical-Methods.pdf"&gt;Article (PDF)&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Local Positioning System with Multiple Cameras</title><link href="https://cmastudios.github.io/2014/03/01/local-positioning-system-with-multiple-cameras/" rel="alternate"></link><published>2014-03-01T21:56:43+00:00</published><updated>2014-03-01T21:56:43+00:00</updated><author><name>Connor Monahan</name></author><id>tag:cmastudios.github.io,2014-03-01:/2014/03/01/local-positioning-system-with-multiple-cameras/</id><summary type="html">&lt;p&gt;Paper presented to the Junior Science, Engineering, and Humanities Symposium at Maryville University in 2015.&lt;/p&gt;
+&lt;p&gt;Abstract:&lt;/p&gt;
+&lt;p&gt;This paper presents the process of obtaining, filtering, and tracking targets to obtain the
+camera’s relative position. The program used computer specific architecture features to optimize
+the program and provide consistent results immediately …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Paper presented to the Junior Science, Engineering, and Humanities Symposium at Maryville University in 2015.&lt;/p&gt;
+&lt;p&gt;Abstract:&lt;/p&gt;
+&lt;p&gt;This paper presents the process of obtaining, filtering, and tracking targets to obtain the
+camera’s relative position. The program used computer specific architecture features to optimize
+the program and provide consistent results immediately. First, images are obtained of the
+environment from 3 different infrared cameras in gray-scale with a field of view of 120 degrees.
+Next, the images underwent a series of image processing algorithms using the OpenCV
+programming libraries, such as morphological transformations and binary topological analysis, to
+identify the targets in the image. This converts the 1080p 1-channel matrix into a vector of points
+called contours. A series of tests were then used to remove potential noise and error from the
+data. The program then uses vectors and matrices as storage for calculating the positioning and
+distance. At this point the information from each camera was combined and utilized in a GPS
+style calculation was used to find the local position of the robot relative to the field. Finally, this
+information was used to solve for the relative pose of the robot by solving a system of non-linear
+functions. The results provide positioning and motion information of the robot relative to the
+static environment.&lt;/p&gt;
+&lt;p&gt;Citation:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;@article{monahan2015,
+title = {Local Positioning System with Multiple Cameras},
+author = {Monahan, Connor},
+note = {preprint on webpage at \url{connormonahan.net}},
+year = {2015}
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;a href="https://cmastudios.github.io/pdfs/Local-Positioning-System-with-Multiple-Cameras.pdf"&gt;Article (PDF)&lt;/a&gt;&lt;/p&gt;</content></entry></feed>

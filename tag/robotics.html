@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Connor's Technical Site - robotics</title>
+        <link rel="stylesheet" href="https://cmastudios.github.io/theme/css/main.css" />
+        <link href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Connor's Technical Site Atom Feed" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://cmastudios.github.io/">Connor's Technical Site </a></h1>
+                <nav><ul>
+                    <li><a href="https://cmastudios.github.io/pages/about.html">About</a></li>
+                    <li><a href="https://cmastudios.github.io/pages/programming.html">Programming</a></li>
+                    <li><a href="https://cmastudios.github.io/category/computer-vision.html">Computer Vision</a></li>
+                    <li><a href="https://cmastudios.github.io/category/games.html">Games</a></li>
+                    <li><a href="https://cmastudios.github.io/category/hardware.html">Hardware</a></li>
+                    <li><a href="https://cmastudios.github.io/category/misc.html">Misc</a></li>
+                    <li><a href="https://cmastudios.github.io/category/research.html">Research</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="https://cmastudios.github.io/2017/02/28/object-detection-with-digits-and-caffe/">Object Detection with DIGITS and Caffe</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2017-02-28T22:08:47+00:00">
+                Published: Tue 28 February 2017
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+        </address>
+<p>In <a href="https://cmastudios.github.io/category/computer-vision.html">Computer Vision</a>.</p>
+<p>tags: <a href="https://cmastudios.github.io/tag/robotics.html">robotics</a> <a href="https://cmastudios.github.io/tag/frc.html">FRC</a> </p>
+</footer><!-- /.post-info --><p>This is a simplified version of the notes I took while creating and training a neural network to detect balls in the FRC 2017 game. This will be further updated with additional detail as time allows.</p>
+<p>Requirements: Vatic, DIGITS, NvCaffe</p>
+<p>An input data set of images with the object for detection in the target environment needs to be captured. About one minute of HD video at 30 FPS should be sufficient.</p>
+<p>In order for DetectNet to find the location of the bounding boxes, it needs to know the ground truth position and location of these in the training data set. Vatic can be used for this process as it will allow for the division of effort of annotating the objects in the images between multiple individuals, and it requires very little training of the operators.</p>
+<p>The output.txt file produced by vatic details the bounding box locations for each frame of the input image. A python script is then used to extract the frame numbers and dimensions from this file and build the folder structure demanded by DetectNet, which is the same as the KITTI data set. The layout appears as follows:</p>
+<div class="highlight"><pre><span></span>./train
+./train/images
+./train/images/00001.jpg
+./train/labels
+./train/labels/00001.txt
+./val
+./val/images
+./val/images/00001.jpg
+./val/labels
+./val/labels/00001.txt
+</pre></div>
+
+
+<p>In DIGITS, create a new object detection data set with the folders as described above. In order to use the original DetectNet network without modification, adjust the padding and resize options so the final output size is 1248&#215;384. For images with heights greater than 384, this may first involve padding to fit the image to a 3.25 aspect ratio followed by a resize. The remainder of the settings here can be left as default, and modification of custom classes can be avoided by simply using class names from the KITTI dataset, such as car or pedestrian for the new input.</p>
+<p>Then, create a new object detection model from this dataset. Set training epochs to 100, batch size to the graphics card&#8217;s limits (a batch size of 10 requires 12 GB of dedicated video memory), solver type to Adam, learning rate to 0.0001, and policy to exponential decay. Disable mean image subtraction. Choose custom network and paste <a href="https://raw.githubusercontent.com/NVIDIA/caffe/caffe-0.15/examples/kitti/detectnet_network.prototxt">the contents of the reference DetectNet network</a>. To speed learning, <a href="http://dl.caffe.berkeleyvision.org/bvlc_googlenet.caffemodel">download the pretrained weights for the GoogLeNet network</a> to the computer running DIGITS and set the path below accordingly. Click create to begin training.</p>
+<p>The model will begin training, and may take hours even on top of the line graphics cards. The output named mAP is close to percentage accuracy for this task and it will increase from zero if the model is learning.</p>
+<p>Final output:</p>
+<p><img alt="Image of ball on field with red rectangle drawn due to its being recognized by the algorithm" src="https://cmastudios.github.io/images/visual-300x160.png"></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://cmastudios.github.io/2014/05/16/computer-vision-for-controller-less-robot-control/" rel="bookmark"
+                           title="Permalink to Computer vision for controller-less robot control">Computer vision for controller-less robot control</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-05-16T21:04:32+00:00">
+                Published: Fri 16 May 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+        </address>
+<p>In <a href="https://cmastudios.github.io/category/computer-vision.html">Computer Vision</a>.</p>
+<p>tags: <a href="https://cmastudios.github.io/tag/kinect.html">kinect</a> <a href="https://cmastudios.github.io/tag/skeleton.html">skeleton</a> <a href="https://cmastudios.github.io/tag/robotics.html">robotics</a> <a href="https://cmastudios.github.io/tag/frc.html">FRC</a> </p>
+</footer><!-- /.post-info -->                <p>It is legal (currently) to use computer vision of humans during autonomous mode to command a robot in FRC. This has been accomplished before by other teams, such as The Cheesy Poofs. We designed a different algorithm that allows for control of speed as well.</p>
+<p>The Ratchet Rockers have designed …</p>
+                <a class="readmore" href="https://cmastudios.github.io/2014/05/16/computer-vision-for-controller-less-robot-control/">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://sae.wustl.edu/">WashU Racing</a></li>
+                            <li><a href="http://ratchetrockers1706.org/">Ratchet Rockers</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="https://github.com/cmastudios">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/connor-monahan-a23318146/">LinkedIn</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

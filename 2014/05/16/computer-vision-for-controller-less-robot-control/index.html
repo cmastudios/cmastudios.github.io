@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Computer vision for controller-less robot control</title>
+        <link rel="stylesheet" href="https://cmastudios.github.io/theme/css/main.css" />
+        <link href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Connor's Technical Site Atom Feed" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://cmastudios.github.io/">Connor's Technical Site </a></h1>
+                <nav><ul>
+                    <li><a href="https://cmastudios.github.io/pages/about.html">About</a></li>
+                    <li><a href="https://cmastudios.github.io/pages/programming.html">Programming</a></li>
+                    <li class="active"><a href="https://cmastudios.github.io/category/computer-vision.html">Computer Vision</a></li>
+                    <li><a href="https://cmastudios.github.io/category/games.html">Games</a></li>
+                    <li><a href="https://cmastudios.github.io/category/hardware.html">Hardware</a></li>
+                    <li><a href="https://cmastudios.github.io/category/misc.html">Misc</a></li>
+                    <li><a href="https://cmastudios.github.io/category/research.html">Research</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://cmastudios.github.io/2014/05/16/computer-vision-for-controller-less-robot-control/" rel="bookmark"
+           title="Permalink to Computer vision for controller-less robot control">Computer vision for controller-less robot control</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2014-05-16T21:04:32+00:00">
+                Published: Fri 16 May 2014
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+        </address>
+<p>In <a href="https://cmastudios.github.io/category/computer-vision.html">Computer Vision</a>.</p>
+<p>tags: <a href="https://cmastudios.github.io/tag/kinect.html">kinect</a> <a href="https://cmastudios.github.io/tag/skeleton.html">skeleton</a> <a href="https://cmastudios.github.io/tag/robotics.html">robotics</a> <a href="https://cmastudios.github.io/tag/frc.html">FRC</a> </p>
+</footer><!-- /.post-info -->      <p>It is legal (currently) to use computer vision of humans during autonomous mode to command a robot in FRC. This has been accomplished before by other teams, such as The Cheesy Poofs. We designed a different algorithm that allows for control of speed as well.</p>
+<p>The Ratchet Rockers have designed two different methods to accomplish this control. The first one implemented resembles 254&#8217;s more directly as it is OpenCV. It searches for an object (via color threshold) and uses its position to determine the speed and direction of the robot. This has been tested to work reliably.</p>
+<p>We also worked on a similar method later using skeleton tracking. One hand tracked works the same way as the previous solution. The other can be used to send specific action commands to, for example, launch a ball at the target. There are some irregularities that occur if the program has been running long, which we haven&#8217;t been able to overcome yet. This program is alternatively written in C#.NET using Microsoft&#8217;s own kinect libraries on windows. We don&#8217;t have confirmed results on the robot yet, but it uses the same protocol as the previous solution.</p>
+<p>Even in the off season time of summer, our team 1706 continues productivity in vision and control solutions.</p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://sae.wustl.edu/">WashU Racing</a></li>
+                            <li><a href="http://ratchetrockers1706.org/">Ratchet Rockers</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="https://github.com/cmastudios">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/connor-monahan-a23318146/">LinkedIn</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
