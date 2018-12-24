@@ -1,8 +1,0 @@
----
-layout: post
-title:  "Connor's Site"
-date:   2017-11-05 18:28:23 -0600
-categories: site update
----
-This site is my GitHub Pages frontend. For now, please refer to my [technical blog](https://cmastudios.me) and my [research projects](https://connormonahan.net) for information.
-
