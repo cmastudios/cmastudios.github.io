@@ -1,20 +1,9 @@
+---
 title: Arrays in Java
 date: 2018-02-08T00:19:57+00:00
 author: Connor Monahan
 status: hidden
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-	"HTML-CSS": { styles: {
-		".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
-	},
-	tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes: true}
-});
-</script>
-
-<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML">
-</script>
+---
 
 # Simple lists with arrays
 
