@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Connor's Technical Site - Hardware</title><link href="https://cmastudios.github.io/" rel="alternate"></link><link href="https://cmastudios.github.io/feeds/hardware.atom.xml" rel="self"></link><id>https://cmastudios.github.io/</id><updated>2017-11-11T20:06:00-06:00</updated><entry><title>Programming various Atmel chips</title><link href="https://cmastudios.github.io/2017/11/11/programming-various-atmel-chips/" rel="alternate"></link><published>2017-11-11T20:06:00-06:00</published><updated>2017-11-11T20:06:00-06:00</updated><author><name>Connor Monahan</name></author><id>tag:cmastudios.github.io,2017-11-11:/2017/11/11/programming-various-atmel-chips/</id><summary type="html">&lt;p&gt;Guides for programming several external Atmel chips with an Arduino&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is meant to be a compendium of programming guides for a series of useful Atmel chips.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Connor's Technical Site - Hardware</title><link href="https://connormonahan.net/" rel="alternate"></link><link href="https://connormonahan.net/feeds/hardware.atom.xml" rel="self"></link><id>https://connormonahan.net/</id><updated>2017-11-11T20:06:00-06:00</updated><entry><title>Programming various Atmel chips</title><link href="https://connormonahan.net/2017/11/11/programming-various-atmel-chips/" rel="alternate"></link><published>2017-11-11T20:06:00-06:00</published><updated>2017-11-11T20:06:00-06:00</updated><author><name>Connor Monahan</name></author><id>tag:connormonahan.net,2017-11-11:/2017/11/11/programming-various-atmel-chips/</id><summary type="html">&lt;p&gt;Guides for programming several external Atmel chips with an Arduino&lt;/p&gt;</summary><content type="html">&lt;p&gt;This is meant to be a compendium of programming guides for a series of useful Atmel chips.&lt;/p&gt;
 &lt;p&gt;Diagram of the Arduino Uno, which will be used to program each of these chips:&lt;/p&gt;
 &lt;h2&gt;ATmega328P&lt;/h2&gt;
-&lt;p&gt;Diagram: &lt;img alt="ATmega328P pinout" src="https://cmastudios.github.io/images/pinoutmega328.png"&gt;&lt;/p&gt;
+&lt;p&gt;Diagram: &lt;img alt="ATmega328P pinout" src="https://connormonahan.net/images/pinoutmega328.png"&gt;&lt;/p&gt;
 &lt;h3&gt;One time: burning the bootloader&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Connect an unwired Arduino to the computer.&lt;/li&gt;
@@ -10,14 +10,14 @@
 &lt;li&gt;In Documents/Arduino, create a new folder called &amp;#8220;hardware&amp;#8221;.&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Download &lt;a href="https://www.arduino.cc/en/uploads/Tutorial/breadboard-1-6-x.zip"&gt;breadboard-1.6.zip&lt;/a&gt; and unzip it in the hardware folder. The final directory tree should look like this:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Arduino IDE hardware folder structure" src="https://cmastudios.github.io/images/idebootloaders.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Arduino IDE hardware folder structure" src="https://connormonahan.net/images/idebootloaders.png"&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Restart the Arduino IDE.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Wire the devices as shown.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ATmega328P on a breadboard bootloader configuration" src="https://cmastudios.github.io/images/wirediagrammega328.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ATmega328P on a breadboard bootloader configuration" src="https://connormonahan.net/images/wirediagrammega328.png"&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Connect a 10 µF capacitor from reset to ground on the Arduino.&lt;/p&gt;
@@ -33,7 +33,7 @@
 &lt;li&gt;Set Tools/Programmer to &amp;#8220;Arduino/Genuino Uno&amp;#8221;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Wire the device like shown.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ATmega328P on a breadboard programming configuration" src="https://cmastudios.github.io/images/wirediagrammega328.2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ATmega328P on a breadboard programming configuration" src="https://connormonahan.net/images/wirediagrammega328.2.png"&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Press the upload button.&lt;/p&gt;
@@ -47,7 +47,7 @@
 &lt;p&gt;Same instructions as for ATmega328P&lt;/p&gt;
 &lt;h2&gt;ATtiny84 (14-pin DIP)&lt;/h2&gt;
 &lt;p&gt;No bootloader is required.&lt;/p&gt;
-&lt;p&gt;Diagram: &lt;img alt="ATtiny84/85 pinout" src="https://cmastudios.github.io/images/pinouttiny8485.png"&gt;&lt;/p&gt;
+&lt;p&gt;Diagram: &lt;img alt="ATtiny84/85 pinout" src="https://connormonahan.net/images/pinouttiny8485.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Uploading sketches:&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Connect an unwired Arduino to the computer.&lt;/li&gt;
@@ -57,7 +57,7 @@
 &lt;li&gt;Restart the Arduino IDE.&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Wire the board as follows.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ATtiny84 on a breadboard programming configuration" src="https://cmastudios.github.io/images/wirediagramtiny84.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ATtiny84 on a breadboard programming configuration" src="https://connormonahan.net/images/wirediagramtiny84.png"&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Set Tools/Board to ATtiny24/44/84&lt;/p&gt;
@@ -71,7 +71,7 @@
 &lt;p&gt;No bootloader is required.&lt;/p&gt;
 &lt;h3&gt;Uploading sketches:&lt;/h3&gt;
 &lt;p&gt;Follow the instructions for the ATtiny84. For step 6, wire the board as follows:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="ATtiny85 on a breadboard programming configuration" src="https://cmastudios.github.io/images/wirediagramtiny85.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="ATtiny85 on a breadboard programming configuration" src="https://connormonahan.net/images/wirediagramtiny85.png"&gt;&lt;/p&gt;
 &lt;p&gt;For step 7, select ATtiny25/45/85. For step 8, select ATtiny85.&lt;/p&gt;
 &lt;p&gt;Sources:&lt;/p&gt;
 &lt;ul&gt;

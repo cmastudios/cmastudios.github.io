@@ -1,54 +1,106 @@
+<!-- taken mostly from the original pelican theme, added CSS bugfix, removed feeds, added Mathjax, removed credits -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
         <meta charset="utf-8" />
         <title>Connor's Technical Site</title>
-        <link rel="stylesheet" href="https://cmastudios.github.io/theme/css/main.css" />
-        <link href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Connor's Technical Site Atom Feed" />
+        <link rel="stylesheet" href="https://connormonahan.net/theme/css/main.css" />
+        <style>
+        #banner nav {
+            overflow: hidden;
+            height: auto;
+        }
+        </style>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            "HTML-CSS": { styles: {
+                ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+            },
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes: true}
+        });
+        </script>
+        
+        <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML">
+        </script>
+                        
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="https://cmastudios.github.io/">Connor's Technical Site </a></h1>
+                <h1><a href="https://connormonahan.net/">Connor's Technical Site </a></h1>
                 <nav><ul>
-                    <li><a href="https://cmastudios.github.io/pages/about.html">About</a></li>
-                    <li><a href="https://cmastudios.github.io/pages/programming.html">Programming</a></li>
-                    <li><a href="https://cmastudios.github.io/category/computer-vision.html">Computer Vision</a></li>
-                    <li><a href="https://cmastudios.github.io/category/games.html">Games</a></li>
-                    <li><a href="https://cmastudios.github.io/category/hardware.html">Hardware</a></li>
-                    <li><a href="https://cmastudios.github.io/category/misc.html">Misc</a></li>
-                    <li><a href="https://cmastudios.github.io/category/research.html">Research</a></li>
+                    <li><a href="https://connormonahan.net/pages/about.html">About</a></li>
+                    <li><a href="https://connormonahan.net/pages/programming.html">Programming</a></li>
+                    <li><a href="https://connormonahan.net/category/computer-vision.html">Computer Vision</a></li>
+                    <li><a href="https://connormonahan.net/category/digital-logic.html">Digital Logic</a></li>
+                    <li><a href="https://connormonahan.net/category/games.html">Games</a></li>
+                    <li><a href="https://connormonahan.net/category/hardware.html">Hardware</a></li>
+                    <li><a href="https://connormonahan.net/category/misc.html">Misc</a></li>
+                    <li><a href="https://connormonahan.net/category/research.html">Research</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://cmastudios.github.io/2018/12/23/website-updates/">Website Updates</a></h1>
+                    <h1 class="entry-title"><a href="https://connormonahan.net/2019/01/14/binary-decimal-hexadecimal/">Binary, Decimal, Hexadecimal</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2018-12-23T18:35:00-06:00">
-                Published: Sun 23 December 2018
+        <abbr class="published" title="2019-01-14T00:00:00-06:00">
+                Published: Mon 14 January 2019
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/misc.html">Misc</a>.</p>
-<p>tags: <a href="https://cmastudios.github.io/tag/website.html">website</a> </p>
-</footer><!-- /.post-info --><p>I have been working on some updates to my websites, aiming to switch them all
-over from WordPress to Pelican, a static site generator written in Python.
-One of the main goals was to merge my technical blog on cmastudios.me with my
-research portfolio on connormonahan.net, so this new website will serve as a combination of both. I intend some of my posts from 2011 to be visible (when I was 13) so if you visit the archives keep in mind that my English skills have improved in the meantime.</p>
-<p>The new website, being entirely static text, should be more secure and faster
-than the old WordPress based websites. Part of my motivation for this update
-was that recently some of the websites I created for my summer job (specifically <a href="https://www.mygridliving.com">My Grid Living</a> and/or <a href="https://www.myfindmenow.com">My Find Me Now</a>) using WordPress had been compromised a few months after
-I left as they had no one to maintain them. Nothing seems to have happened to
-any of my personal websites but the breach has made me more cautious when using
-that blogging software.</p>
-<p>I additionally intend to host this website on GitHub Pages, which provides free
-static site hosting to their members. This will mean that the source code for
-all my posts will be <a href="https://github.com/cmastudios/cmastudios.github.io">available on GitHub</a>, so send me a pull request! I
-will attempt to post more regular updates to this site, especially "lessons
-learned" guides related to hardware or software I've used.</p>                </article>
+<p>In <a href="https://connormonahan.net/category/digital-logic.html">Digital Logic</a>.</p>
+
+</footer><!-- /.post-info --><h1>Representation of different bases, and converting to decimal</h1>
+<h2>Decimal</h2>
+<p>We think of decimal as the base-10 system. The set of all decimal digits is $\{0,1,2,3,4,5,6,7,8,9\}$.</p>
+<p>Imagine we have a number 42 (base ten). We could rewrite it as each digit multiplied by a power of ten, like so: $42 = 4 * 10^1 + 2 * 10^0$.</p>
+<h2>Binary</h2>
+<p>The set of all binary digits is $\{0,1\}$.</p>
+<p>The same idea is true for binary numbers, also known as the base-2 system. Imagine we have a number 101010 (base two). We could rewrite it as each digit multiplied by a power of two, like so: $101010_2 = 1 * 2^5 + 0 * 2^4 + 1 * 2^3 + 0 * 2^2 + 1 * 2^1 + 0 * 2^0$. If we wanted to get the decimal version of this, we could just simplify: $1 * 2^5 + 1 * 2^3 + 1 * 2^1 = 32 + 8 + 2=42$.</p>
+<h2>Hexadecimal</h2>
+<p>The set of all hexadecimal digits is $\{0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F\}$, where A-F have decimal values of 10-15 respectively.</p>
+<p>The same idea is true for hexadecimal numbers, also known as the base-16 system. Imagine we have a number 2A (base sixteen). We could rewrite it as each digit multiplied by a power of sixteen, like so: $2A_{16} = 2 * 16^1 + 10 * 16^0$. If we wanted to get the decimal version of this, we could just simplify: $2 * 16^1 + 10 * 16^0 = 32 + 10 = 42$.</p>
+<h2>Bringing it together: binary and hexadecimal to decimal</h2>
+<p>Above, we have seen that finding the value of a binary or hexadecimal number in decimal simply requires writing out each digit multiplied by its place value and then simplifying.</p>
+<h1>Converting decimal to binary or hexadecimal by repeated division</h1>
+<p>A technique for converting to either binary or hexadecimal is to take the number in decimal and successively divide by either 2 or 16 (depending on the target base), using the remainders to construct the resultant number. Say we want to convert 42 to binary. We would start to divide by 2:</p>
+<!-- thanks https://stackoverflow.com/questions/22867785 --->
+
+<p>$$
+\require{enclose}
+\begin{array}{rll}
+    21\\[-3pt]
+   2 \enclose{longdiv}{42}\kern-.2ex \\[-3pt]
+      \underline{42}  \\[-3pt]
+      0 \\[-3pt]
+  \end{array}
+$$</p>
+<p>Now, we know that the rightmost digit of the resulting binary number is 0, as that is the remainder of the division. We continue by dividing the previous quotient again:</p>
+<p>$$
+\require{enclose}
+\begin{array}{rll}
+    10\\[-3pt]
+   2 \enclose{longdiv}{21}\kern-.2ex \\[-3pt]
+      \underline{20}  \\[-3pt]
+      1 \\[-3pt]
+  \end{array}
+$$</p>
+<p>The remainder is 1, so the next digit to the left is a 1. Continue dividing until the quotient is 0 (the intermediate three divisions are left as an exercise for the reader):</p>
+<p>$$
+\require{enclose}
+\begin{array}{rll}
+    0\\[-3pt]
+   2 \enclose{longdiv}{1}\kern-.2ex \\[-3pt]
+      \underline{0}  \\[-3pt]
+      1 \\[-3pt]
+  \end{array}
+$$</p>
+<p>The final remainder is 1, so the leftmost digit of the resulting binary number is 1. Writing all the results next to each other, we get a result of 101010.</p>
+<p>The same technique works for converting to hexadecimal (simply divide by 16 repeatedly instead of 2). This technique generalizes to other bases as well.</p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
@@ -57,7 +109,29 @@ learned" guides related to hardware or software I've used.</p>                </
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2018/11/04/0hgame-2018/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2018/12/23/website-updates/" rel="bookmark"
+                           title="Permalink to Website Updates">Website Updates</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2018-12-23T18:35:00-06:00">
+                Published: Sun 23 December 2018
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
+        </address>
+<p>In <a href="https://connormonahan.net/category/misc.html">Misc</a>.</p>
+<p>tags: <a href="https://connormonahan.net/tag/website.html">website</a> </p>
+</footer><!-- /.post-info -->                <p>On merging websites and moving to GitHub pages</p>
+                <a class="readmore" href="https://connormonahan.net/2018/12/23/website-updates/">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://connormonahan.net/2018/11/04/0hgame-2018/" rel="bookmark"
                            title="Permalink to Zero Hour Game Jam 2018">Zero Hour Game Jam 2018</a></h1>
                 </header>
 
@@ -68,18 +142,18 @@ learned" guides related to hardware or software I've used.</p>                </
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
-<p>tags: <a href="https://cmastudios.github.io/tag/0hgame.html">0hgame</a> </p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
+<p>tags: <a href="https://connormonahan.net/tag/0hgame.html">0hgame</a> </p>
 </footer><!-- /.post-info -->                <p>Me and Julia's corn-y submission</p>
-                <a class="readmore" href="https://cmastudios.github.io/2018/11/04/0hgame-2018/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2018/11/04/0hgame-2018/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2017/11/11/programming-various-atmel-chips/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2017/11/11/programming-various-atmel-chips/" rel="bookmark"
                            title="Permalink to Programming various Atmel chips">Programming various Atmel chips</a></h1>
                 </header>
 
@@ -90,18 +164,18 @@ learned" guides related to hardware or software I've used.</p>                </
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/hardware.html">Hardware</a>.</p>
-<p>tags: <a href="https://cmastudios.github.io/tag/arduino.html">arduino</a> <a href="https://cmastudios.github.io/tag/atmel.html">atmel</a> </p>
+<p>In <a href="https://connormonahan.net/category/hardware.html">Hardware</a>.</p>
+<p>tags: <a href="https://connormonahan.net/tag/arduino.html">arduino</a> <a href="https://connormonahan.net/tag/atmel.html">atmel</a> </p>
 </footer><!-- /.post-info -->                <p>Guides for programming several external Atmel chips with an Arduino</p>
-                <a class="readmore" href="https://cmastudios.github.io/2017/11/11/programming-various-atmel-chips/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2017/11/11/programming-various-atmel-chips/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2017/11/05/0hgame-2017/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2017/11/05/0hgame-2017/" rel="bookmark"
                            title="Permalink to Zero Hour Game Jam 2017">Zero Hour Game Jam 2017</a></h1>
                 </header>
 
@@ -116,18 +190,18 @@ learned" guides related to hardware or software I've used.</p>                </
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
-<p>tags: <a href="https://cmastudios.github.io/tag/0hgame.html">0hgame</a> </p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
+<p>tags: <a href="https://connormonahan.net/tag/0hgame.html">0hgame</a> </p>
 </footer><!-- /.post-info -->                <p>Me and Julia's submission "Satan Cart Horror"</p>
-                <a class="readmore" href="https://cmastudios.github.io/2017/11/05/0hgame-2017/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2017/11/05/0hgame-2017/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2017/02/28/object-detection-with-digits-and-caffe/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2017/02/28/object-detection-with-digits-and-caffe/" rel="bookmark"
                            title="Permalink to Object Detection with DIGITS and Caffe">Object Detection with DIGITS and Caffe</a></h1>
                 </header>
 
@@ -138,20 +212,20 @@ learned" guides related to hardware or software I've used.</p>                </
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/computer-vision.html">Computer Vision</a>.</p>
-<p>tags: <a href="https://cmastudios.github.io/tag/robotics.html">robotics</a> <a href="https://cmastudios.github.io/tag/frc.html">FRC</a> </p>
+<p>In <a href="https://connormonahan.net/category/computer-vision.html">Computer Vision</a>.</p>
+<p>tags: <a href="https://connormonahan.net/tag/robotics.html">robotics</a> <a href="https://connormonahan.net/tag/frc.html">FRC</a> </p>
 </footer><!-- /.post-info -->                <p>This is a simplified version of the notes I took while creating and training a neural network to detect balls in the FRC 2017 game. This will be further updated with additional detail as time allows.</p>
 <p>Requirements: Vatic, DIGITS, NvCaffe</p>
 <p>An input data set of images with the object for …</p>
-                <a class="readmore" href="https://cmastudios.github.io/2017/02/28/object-detection-with-digits-and-caffe/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2017/02/28/object-detection-with-digits-and-caffe/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2017/02/15/predicting-the-presence-of-cancer-in-medical-images-using-convolutional-neural-networks/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2017/02/15/predicting-the-presence-of-cancer-in-medical-images-using-convolutional-neural-networks/" rel="bookmark"
                            title="Permalink to Predicting the Presence of Cancer in Medical Images using Convolutional Neural Networks">Predicting the Presence of Cancer in Medical Images using Convolutional Neural Networks</a></h1>
                 </header>
 
@@ -162,20 +236,20 @@ learned" guides related to hardware or software I've used.</p>                </
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/research.html">Research</a>.</p>
+<p>In <a href="https://connormonahan.net/category/research.html">Research</a>.</p>
 
 </footer><!-- /.post-info -->                <p>Paper submitted to Missouri Junior Science, Engineering, and Humanities Symposium for 2017</p>
 <p>Abstract:</p>
 <p>Convolutional neural networks model human brain activity from sensory inputs and have been applied to various activities such as driving cars, recognizing speech, and playing complex games. These machine learning algorithms gained popularity in recent years as …</p>
-                <a class="readmore" href="https://cmastudios.github.io/2017/02/15/predicting-the-presence-of-cancer-in-medical-images-using-convolutional-neural-networks/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2017/02/15/predicting-the-presence-of-cancer-in-medical-images-using-convolutional-neural-networks/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2016/09/14/opencv-installation-guide/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2016/09/14/opencv-installation-guide/" rel="bookmark"
                            title="Permalink to OpenCV Installation Guide">OpenCV Installation Guide</a></h1>
                 </header>
 
@@ -186,9 +260,9 @@ learned" guides related to hardware or software I've used.</p>                </
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/computer-vision.html">Computer Vision</a>.</p>
+<p>In <a href="https://connormonahan.net/category/computer-vision.html">Computer Vision</a>.</p>
 
 </footer><!-- /.post-info -->                <ul>
 <li>Uncategorized
@@ -201,13 +275,13 @@ format: link</li>
     <a href="http://www.pyimagesearch.com/2015/06/22/install-opencv-3-0-and-python-2-7-on-ubuntu/">Install OpenCV 3.0 and Python 2.7+ on Ubuntu</a>
   </p>
 </blockquote>
-                <a class="readmore" href="https://cmastudios.github.io/2016/09/14/opencv-installation-guide/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2016/09/14/opencv-installation-guide/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2016/01/10/depth-image-segmentation-using-statistical-methods/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2016/01/10/depth-image-segmentation-using-statistical-methods/" rel="bookmark"
                            title="Permalink to Depth Image Segmentation Using Statistical Methods">Depth Image Segmentation Using Statistical Methods</a></h1>
                 </header>
 
@@ -218,22 +292,22 @@ format: link</li>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/research.html">Research</a>.</p>
+<p>In <a href="https://connormonahan.net/category/research.html">Research</a>.</p>
 
 </footer><!-- /.post-info -->                <p>Paper presented to the Junior Science, Engineering, and Humanities Symposium at Maryville University in 2016.</p>
 <p>Abstract:</p>
 <p>This paper presents an algorithm that utilizes unsupervised machine learning methods for
 classifying n-objects in a spatial image. Other methods of spatial image segmentation, for
 example the Laplacian operator and support vector machines (SVM …</p>
-                <a class="readmore" href="https://cmastudios.github.io/2016/01/10/depth-image-segmentation-using-statistical-methods/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2016/01/10/depth-image-segmentation-using-statistical-methods/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2015/11/01/0hgame-2015/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2015/11/01/0hgame-2015/" rel="bookmark"
                            title="Permalink to Zero Hour Game Jam 2015">Zero Hour Game Jam 2015</a></h1>
                 </header>
 
@@ -248,44 +322,18 @@ example the Laplacian operator and support vector machines (SVM …</p>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
-<p>tags: <a href="https://cmastudios.github.io/tag/0hgame.html">0hgame</a> </p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
+<p>tags: <a href="https://connormonahan.net/tag/0hgame.html">0hgame</a> </p>
 </footer><!-- /.post-info -->                <p>My submission "Radical Harvest Pimps"</p>
-                <a class="readmore" href="https://cmastudios.github.io/2015/11/01/0hgame-2015/">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="https://cmastudios.github.io/2014/11/02/0hgame-2014/" rel="bookmark"
-                           title="Permalink to Zero Hour Game Jam 2014">Zero Hour Game Jam 2014</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2014-11-02T02:01:34+00:00">
-                Published: Sun 02 November 2014
-        </abbr>
-		<br />
-        <abbr class="modified" title="2018-12-23T18:25:00-06:00">
-                Updated: Sun 23 December 2018
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
-        </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
-<p>tags: <a href="https://cmastudios.github.io/tag/0hgame.html">0hgame</a> </p>
-</footer><!-- /.post-info -->                <p>Me and Zac's submission "Future Cyborg Jihad"</p>
-                <a class="readmore" href="https://cmastudios.github.io/2014/11/02/0hgame-2014/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2015/11/01/0hgame-2015/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->
 <p class="paginator">
     Page 1 / 5
-        <a href="https://cmastudios.github.io/index2.html">&raquo;</a>
+        <a href="https://connormonahan.net/index2.html">&raquo;</a>
 </p>
                 </section><!-- /#content -->
         <section id="extras" class="body">
@@ -299,7 +347,7 @@ example the Laplacian operator and support vector machines (SVM …</p>
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="https://connormonahan.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="https://github.com/cmastudios">GitHub</a></li>
                             <li><a href="https://www.linkedin.com/in/connor-monahan-a23318146/">LinkedIn</a></li>
@@ -308,11 +356,7 @@ example the Laplacian operator and support vector machines (SVM …</p>
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                <p>Design credits: <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>.</p>
         </footer><!-- /#contentinfo -->
 
 </body>

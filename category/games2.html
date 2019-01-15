@@ -1,23 +1,43 @@
+<!-- taken mostly from the original pelican theme, added CSS bugfix, removed feeds, added Mathjax, removed credits -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
         <meta charset="utf-8" />
         <title>Connor's Technical Site - Games</title>
-        <link rel="stylesheet" href="https://cmastudios.github.io/theme/css/main.css" />
-        <link href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Connor's Technical Site Atom Feed" />
+        <link rel="stylesheet" href="https://connormonahan.net/theme/css/main.css" />
+        <style>
+        #banner nav {
+            overflow: hidden;
+            height: auto;
+        }
+        </style>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            "HTML-CSS": { styles: {
+                ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+            },
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes: true}
+        });
+        </script>
+        
+        <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML">
+        </script>
+                        
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="https://cmastudios.github.io/">Connor's Technical Site </a></h1>
+                <h1><a href="https://connormonahan.net/">Connor's Technical Site </a></h1>
                 <nav><ul>
-                    <li><a href="https://cmastudios.github.io/pages/about.html">About</a></li>
-                    <li><a href="https://cmastudios.github.io/pages/programming.html">Programming</a></li>
-                    <li><a href="https://cmastudios.github.io/category/computer-vision.html">Computer Vision</a></li>
-                    <li class="active"><a href="https://cmastudios.github.io/category/games.html">Games</a></li>
-                    <li><a href="https://cmastudios.github.io/category/hardware.html">Hardware</a></li>
-                    <li><a href="https://cmastudios.github.io/category/misc.html">Misc</a></li>
-                    <li><a href="https://cmastudios.github.io/category/research.html">Research</a></li>
+                    <li><a href="https://connormonahan.net/pages/about.html">About</a></li>
+                    <li><a href="https://connormonahan.net/pages/programming.html">Programming</a></li>
+                    <li><a href="https://connormonahan.net/category/computer-vision.html">Computer Vision</a></li>
+                    <li><a href="https://connormonahan.net/category/digital-logic.html">Digital Logic</a></li>
+                    <li class="active"><a href="https://connormonahan.net/category/games.html">Games</a></li>
+                    <li><a href="https://connormonahan.net/category/hardware.html">Hardware</a></li>
+                    <li><a href="https://connormonahan.net/category/misc.html">Misc</a></li>
+                    <li><a href="https://connormonahan.net/category/research.html">Research</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
@@ -25,7 +45,7 @@
                     <ol id="posts-list" class="hfeed" start="9">
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2013/11/21/new-warhub-forum/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2013/11/21/new-warhub-forum/" rel="bookmark"
                            title="Permalink to New warhub forum">New warhub forum</a></h1>
                 </header>
 
@@ -36,9 +56,9 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
 
 </footer><!-- /.post-info -->                <ul>
 <li>"2409978528"
@@ -49,13 +69,13 @@ format: link</li>
 <hr>
 <p>The Warhub Minecraft server now has a brand new forum! This site may be used to communicate with other players on that server, look at new warzones, and track development made by me and tommytony.</p>
 <p><a href="http://warhub.tommytony.com/">http://warhub.tommytony.com/</a></p>
-                <a class="readmore" href="https://cmastudios.github.io/2013/11/21/new-warhub-forum/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2013/11/21/new-warhub-forum/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2013/11/17/debugging-plugins-on-a-live-bukkit-server/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2013/11/17/debugging-plugins-on-a-live-bukkit-server/" rel="bookmark"
                            title="Permalink to Debugging plugins on a live Bukkit server">Debugging plugins on a live Bukkit server</a></h1>
                 </header>
 
@@ -66,9 +86,9 @@ format: link</li>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
 
 </footer><!-- /.post-info -->                <blockquote>
 <p>&lt;tommytony&gt; java -Xms2048M -Xmx2048M -Xdebug -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=y -jar craftbukkit-1.6.4-R2.0.jar <br>
@@ -77,13 +97,13 @@ format: link</li>
 &lt;tommytony&gt; set port 8787 <br>
 &lt;tommytony&gt; run that debug profile from eclipse <br>
 &lt;tommytony&gt; your server should start …</p></blockquote>
-                <a class="readmore" href="https://cmastudios.github.io/2013/11/17/debugging-plugins-on-a-live-bukkit-server/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2013/11/17/debugging-plugins-on-a-live-bukkit-server/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2013/11/04/17-update/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2013/11/04/17-update/" rel="bookmark"
                            title="Permalink to 1.7 Update">1.7 Update</a></h1>
                 </header>
 
@@ -94,9 +114,9 @@ format: link</li>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
 
 </footer><!-- /.post-info -->                <ul>
 <li>"2147706142"
@@ -106,13 +126,13 @@ format: status</li>
 </ul>
 <hr>
 <p>The server is now running a testing version of the 1.7 server. You can join with your 1.7 clients, but it is impossible to use any new blocks or items yet.</p>
-                <a class="readmore" href="https://cmastudios.github.io/2013/11/04/17-update/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2013/11/04/17-update/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2013/11/03/0hgame-2013/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2013/11/03/0hgame-2013/" rel="bookmark"
                            title="Permalink to Zero Hour Game Jam 2013">Zero Hour Game Jam 2013</a></h1>
                 </header>
 
@@ -127,18 +147,18 @@ format: status</li>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
-<p>tags: <a href="https://cmastudios.github.io/tag/0hgame.html">0hgame</a> </p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
+<p>tags: <a href="https://connormonahan.net/tag/0hgame.html">0hgame</a> </p>
 </footer><!-- /.post-info -->                <p>Me and Vel0h's submission "Cosmic Soccer Battle"</p>
-                <a class="readmore" href="https://cmastudios.github.io/2013/11/03/0hgame-2013/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2013/11/03/0hgame-2013/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2013/10/23/progress-bar-code-i-found/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2013/10/23/progress-bar-code-i-found/" rel="bookmark"
                            title="Permalink to Progress bar code I found">Progress bar code I found</a></h1>
                 </header>
 
@@ -149,9 +169,9 @@ format: status</li>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
 
 </footer><!-- /.post-info -->                <div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">String</span> <span class="nf">generateProgressBar</span><span class="o">()</span> <span class="o">{</span>
   <span class="kt">int</span> <span class="n">total</span> <span class="o">=</span> <span class="n">getSizeX</span><span class="o">()</span> <span class="o">*</span> <span class="n">getSizeY</span><span class="o">()</span> <span class="o">*</span> <span class="n">getSizeZ</span><span class="o">();</span> <span class="c1">// Area</span>
@@ -161,13 +181,13 @@ format: status</li>
   <span class="kt">int</span> <span class="n">bars</span> <span class="o">=</span> <span class="o">(</span><span class="kt">int</span><span class="o">)</span> <span class="n">percentage</span> <span class="o">*</span> <span class="mi">10</span><span class="o">;</span> <span class="c1">// 0.1 becomes 1</span>
   <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">bar</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">bar</span> <span class="o">&amp;</span><span class="n">lt</span><span class="o">;=</span> <span class="mi">10</span><span class="o">;</span> <span class="n">bar</span><span class="o">++)</span> <span class="o">{</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">bars</span> <span class="o">&amp;</span><span class="n">gt</span><span class="o">;=</span> <span class="n">bar …</span></pre></div>
-                <a class="readmore" href="https://cmastudios.github.io/2013/10/23/progress-bar-code-i-found/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2013/10/23/progress-bar-code-i-found/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2013/10/23/releasing-karma-v10/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2013/10/23/releasing-karma-v10/" rel="bookmark"
                            title="Permalink to Releasing Karma v1.0">Releasing Karma v1.0</a></h1>
                 </header>
 
@@ -178,9 +198,9 @@ format: status</li>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
 
 </footer><!-- /.post-info -->                <ul>
 <li>"2562199601"
@@ -190,13 +210,13 @@ format: link</li>
 </ul>
 <hr>
 <p>Karma is now available for download from the official <a href="http://dev.bukkit.org/bukkit-plugins/karma-ranking/">Bukkit plugins repository</a>. I have decided to release it there to help out other server administrators who need a rock-solid auto ranking system. This version, v1.0, also comes with <a href="http://issue.tommytony.us/secure/ReleaseNote.jspa?projectId=10000&amp;version=10002">a plethora of fixes and new …</a></p>
-                <a class="readmore" href="https://cmastudios.github.io/2013/10/23/releasing-karma-v10/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2013/10/23/releasing-karma-v10/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2013/10/07/warhub-webshow-minez-s1e1/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2013/10/07/warhub-webshow-minez-s1e1/" rel="bookmark"
                            title="Permalink to Warhub Webshow MineZ S1E1">Warhub Webshow MineZ S1E1</a></h1>
                 </header>
 
@@ -207,9 +227,9 @@ format: link</li>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
 
 </footer><!-- /.post-info -->                <ul>
 <li>"2100900707"
@@ -219,13 +239,13 @@ format: video</li>
 </ul>
 <hr>
 <p>This is our first video in our new MineZ series where we play on the MineZ zombie survival server over on <a href="http://shotbow.net">shotbow</a>.</p>
-                <a class="readmore" href="https://cmastudios.github.io/2013/10/07/warhub-webshow-minez-s1e1/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2013/10/07/warhub-webshow-minez-s1e1/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2013/09/29/video-series-warhub-webshow/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2013/09/29/video-series-warhub-webshow/" rel="bookmark"
                            title="Permalink to 'Video series – “Warhub Webshow”'">'Video series &#8211; &#8220;Warhub Webshow&#8221;'</a></h1>
                 </header>
 
@@ -236,9 +256,9 @@ format: video</li>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
 
 </footer><!-- /.post-info -->                <ul>
 <li>"2146555420"
@@ -247,13 +267,13 @@ categories:</li>
 </ul>
 <hr>
 <p>Me and some of my friends are going to be starting up a new video series of us playing different mini games together. There will be much more than just mini games though. We plan on having discussions sometimes regarding our game server add-ons and various things …</p>
-                <a class="readmore" href="https://cmastudios.github.io/2013/09/29/video-series-warhub-webshow/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2013/09/29/video-series-warhub-webshow/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2013/08/28/time-available-for-serverplugin-work/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2013/08/28/time-available-for-serverplugin-work/" rel="bookmark"
                            title="Permalink to Time available for server/plugin work">Time available for server/plugin work</a></h1>
                 </header>
 
@@ -264,19 +284,19 @@ categories:</li>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
 
 </footer><!-- /.post-info -->                <h2>- Uncategorized</h2>
 <p>School has once again started up again for me, which means I&#8217;ll have a minimal amount of time to spend improving the Minecraft server and server plugins. However, I have a lot of time available on Labor Day weekend. I plan to use this time to work on …</p>
-                <a class="readmore" href="https://cmastudios.github.io/2013/08/28/time-available-for-serverplugin-work/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2013/08/28/time-available-for-serverplugin-work/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2013/07/28/post-vacation-plugin-plans/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2013/07/28/post-vacation-plugin-plans/" rel="bookmark"
                            title="Permalink to Post-Vacation plugin plans">Post-Vacation plugin plans</a></h1>
                 </header>
 
@@ -287,9 +307,9 @@ categories:</li>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
 
 </footer><!-- /.post-info -->                <ul>
 <li>"2470621381"
@@ -298,14 +318,14 @@ categories:</li>
 </ul>
 <hr>
 <p>I will be heading back from my final vacation of the summer tomorrow and plan to get to work on my plugins. I have a few small ones I have yet to complete the last few issues (ironball and parkour). There are a lot of issues I …</p>
-                <a class="readmore" href="https://cmastudios.github.io/2013/07/28/post-vacation-plugin-plans/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2013/07/28/post-vacation-plugin-plans/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->
 <p class="paginator">
-        <a href="https://cmastudios.github.io/category/games.html">&laquo;</a>
+        <a href="https://connormonahan.net/category/games.html">&laquo;</a>
     Page 2 / 4
-        <a href="https://cmastudios.github.io/category/games3.html">&raquo;</a>
+        <a href="https://connormonahan.net/category/games3.html">&raquo;</a>
 </p>
                 </section><!-- /#content -->
         <section id="extras" class="body">
@@ -319,7 +339,7 @@ categories:</li>
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="https://connormonahan.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="https://github.com/cmastudios">GitHub</a></li>
                             <li><a href="https://www.linkedin.com/in/connor-monahan-a23318146/">LinkedIn</a></li>
@@ -328,11 +348,7 @@ categories:</li>
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                <p>Design credits: <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>.</p>
         </footer><!-- /#contentinfo -->
 
 </body>

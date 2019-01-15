@@ -1,32 +1,53 @@
+<!-- taken mostly from the original pelican theme, added CSS bugfix, removed feeds, added Mathjax, removed credits -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
         <meta charset="utf-8" />
         <title>Connor's Technical Site - Categories</title>
-        <link rel="stylesheet" href="https://cmastudios.github.io/theme/css/main.css" />
-        <link href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Connor's Technical Site Atom Feed" />
+        <link rel="stylesheet" href="https://connormonahan.net/theme/css/main.css" />
+        <style>
+        #banner nav {
+            overflow: hidden;
+            height: auto;
+        }
+        </style>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            "HTML-CSS": { styles: {
+                ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+            },
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes: true}
+        });
+        </script>
+        
+        <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML">
+        </script>
+                        
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="https://cmastudios.github.io/">Connor's Technical Site </a></h1>
+                <h1><a href="https://connormonahan.net/">Connor's Technical Site </a></h1>
                 <nav><ul>
-                    <li><a href="https://cmastudios.github.io/pages/about.html">About</a></li>
-                    <li><a href="https://cmastudios.github.io/pages/programming.html">Programming</a></li>
-                    <li><a href="https://cmastudios.github.io/category/computer-vision.html">Computer Vision</a></li>
-                    <li><a href="https://cmastudios.github.io/category/games.html">Games</a></li>
-                    <li><a href="https://cmastudios.github.io/category/hardware.html">Hardware</a></li>
-                    <li><a href="https://cmastudios.github.io/category/misc.html">Misc</a></li>
-                    <li><a href="https://cmastudios.github.io/category/research.html">Research</a></li>
+                    <li><a href="https://connormonahan.net/pages/about.html">About</a></li>
+                    <li><a href="https://connormonahan.net/pages/programming.html">Programming</a></li>
+                    <li><a href="https://connormonahan.net/category/computer-vision.html">Computer Vision</a></li>
+                    <li><a href="https://connormonahan.net/category/digital-logic.html">Digital Logic</a></li>
+                    <li><a href="https://connormonahan.net/category/games.html">Games</a></li>
+                    <li><a href="https://connormonahan.net/category/hardware.html">Hardware</a></li>
+                    <li><a href="https://connormonahan.net/category/misc.html">Misc</a></li>
+                    <li><a href="https://connormonahan.net/category/research.html">Research</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
     <h1>Categories on Connor's Technical Site</h1>
     <ul>
-        <li><a href="https://cmastudios.github.io/category/computer-vision.html">Computer Vision</a> (3)</li>
-        <li><a href="https://cmastudios.github.io/category/games.html">Games</a> (36)</li>
-        <li><a href="https://cmastudios.github.io/category/hardware.html">Hardware</a> (1)</li>
-        <li><a href="https://cmastudios.github.io/category/misc.html">Misc</a> (1)</li>
-        <li><a href="https://cmastudios.github.io/category/research.html">Research</a> (3)</li>
+        <li><a href="https://connormonahan.net/category/computer-vision.html">Computer Vision</a> (3)</li>
+        <li><a href="https://connormonahan.net/category/digital-logic.html">Digital Logic</a> (1)</li>
+        <li><a href="https://connormonahan.net/category/games.html">Games</a> (36)</li>
+        <li><a href="https://connormonahan.net/category/hardware.html">Hardware</a> (1)</li>
+        <li><a href="https://connormonahan.net/category/misc.html">Misc</a> (1)</li>
+        <li><a href="https://connormonahan.net/category/research.html">Research</a> (3)</li>
     </ul>
         <section id="extras" class="body">
                 <div class="blogroll">
@@ -39,7 +60,7 @@
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="https://connormonahan.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="https://github.com/cmastudios">GitHub</a></li>
                             <li><a href="https://www.linkedin.com/in/connor-monahan-a23318146/">LinkedIn</a></li>
@@ -48,11 +69,7 @@
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                <p>Design credits: <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>.</p>
         </footer><!-- /#contentinfo -->
 
 </body>

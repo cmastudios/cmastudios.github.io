@@ -1,38 +1,58 @@
+<!-- taken mostly from the original pelican theme, added CSS bugfix, removed feeds, added Mathjax, removed credits -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
         <meta charset="utf-8" />
         <title>Connor's Technical Site - Research</title>
-        <link rel="stylesheet" href="https://cmastudios.github.io/theme/css/main.css" />
-        <link href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Connor's Technical Site Atom Feed" />
+        <link rel="stylesheet" href="https://connormonahan.net/theme/css/main.css" />
+        <style>
+        #banner nav {
+            overflow: hidden;
+            height: auto;
+        }
+        </style>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            "HTML-CSS": { styles: {
+                ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+            },
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes: true}
+        });
+        </script>
+        
+        <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML">
+        </script>
+                        
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="https://cmastudios.github.io/">Connor's Technical Site </a></h1>
+                <h1><a href="https://connormonahan.net/">Connor's Technical Site </a></h1>
                 <nav><ul>
-                    <li><a href="https://cmastudios.github.io/pages/about.html">About</a></li>
-                    <li><a href="https://cmastudios.github.io/pages/programming.html">Programming</a></li>
-                    <li><a href="https://cmastudios.github.io/category/computer-vision.html">Computer Vision</a></li>
-                    <li><a href="https://cmastudios.github.io/category/games.html">Games</a></li>
-                    <li><a href="https://cmastudios.github.io/category/hardware.html">Hardware</a></li>
-                    <li><a href="https://cmastudios.github.io/category/misc.html">Misc</a></li>
-                    <li class="active"><a href="https://cmastudios.github.io/category/research.html">Research</a></li>
+                    <li><a href="https://connormonahan.net/pages/about.html">About</a></li>
+                    <li><a href="https://connormonahan.net/pages/programming.html">Programming</a></li>
+                    <li><a href="https://connormonahan.net/category/computer-vision.html">Computer Vision</a></li>
+                    <li><a href="https://connormonahan.net/category/digital-logic.html">Digital Logic</a></li>
+                    <li><a href="https://connormonahan.net/category/games.html">Games</a></li>
+                    <li><a href="https://connormonahan.net/category/hardware.html">Hardware</a></li>
+                    <li><a href="https://connormonahan.net/category/misc.html">Misc</a></li>
+                    <li class="active"><a href="https://connormonahan.net/category/research.html">Research</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://cmastudios.github.io/2017/02/15/predicting-the-presence-of-cancer-in-medical-images-using-convolutional-neural-networks/">Predicting the Presence of Cancer in Medical Images using Convolutional Neural Networks</a></h1>
+                    <h1 class="entry-title"><a href="https://connormonahan.net/2017/02/15/predicting-the-presence-of-cancer-in-medical-images-using-convolutional-neural-networks/">Predicting the Presence of Cancer in Medical Images using Convolutional Neural Networks</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2017-02-15T22:43:21+00:00">
                 Published: Wed 15 February 2017
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/research.html">Research</a>.</p>
+<p>In <a href="https://connormonahan.net/category/research.html">Research</a>.</p>
 
 </footer><!-- /.post-info --><p>Paper submitted to Missouri Junior Science, Engineering, and Humanities Symposium for 2017</p>
 <p>Abstract:</p>
@@ -47,7 +67,7 @@ year = {2017}
 </pre></div>
 
 
-<p><a href="https://cmastudios.github.io/pdfs/Predicting-the-Presence-of-Cancer-in-Medical-Images-using-Convolutional-Neural-Networks.pdf">Article (PDF)</a></p>                </article>
+<p><a href="https://connormonahan.net/pdfs/Predicting-the-Presence-of-Cancer-in-Medical-Images-using-Convolutional-Neural-Networks.pdf">Article (PDF)</a></p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
@@ -56,7 +76,7 @@ year = {2017}
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2016/01/10/depth-image-segmentation-using-statistical-methods/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2016/01/10/depth-image-segmentation-using-statistical-methods/" rel="bookmark"
                            title="Permalink to Depth Image Segmentation Using Statistical Methods">Depth Image Segmentation Using Statistical Methods</a></h1>
                 </header>
 
@@ -67,22 +87,22 @@ year = {2017}
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/research.html">Research</a>.</p>
+<p>In <a href="https://connormonahan.net/category/research.html">Research</a>.</p>
 
 </footer><!-- /.post-info -->                <p>Paper presented to the Junior Science, Engineering, and Humanities Symposium at Maryville University in 2016.</p>
 <p>Abstract:</p>
 <p>This paper presents an algorithm that utilizes unsupervised machine learning methods for
 classifying n-objects in a spatial image. Other methods of spatial image segmentation, for
 example the Laplacian operator and support vector machines (SVM …</p>
-                <a class="readmore" href="https://cmastudios.github.io/2016/01/10/depth-image-segmentation-using-statistical-methods/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2016/01/10/depth-image-segmentation-using-statistical-methods/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2014/03/01/local-positioning-system-with-multiple-cameras/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2014/03/01/local-positioning-system-with-multiple-cameras/" rel="bookmark"
                            title="Permalink to Local Positioning System with Multiple Cameras">Local Positioning System with Multiple Cameras</a></h1>
                 </header>
 
@@ -93,16 +113,16 @@ example the Laplacian operator and support vector machines (SVM …</p>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/research.html">Research</a>.</p>
+<p>In <a href="https://connormonahan.net/category/research.html">Research</a>.</p>
 
 </footer><!-- /.post-info -->                <p>Paper presented to the Junior Science, Engineering, and Humanities Symposium at Maryville University in 2015.</p>
 <p>Abstract:</p>
 <p>This paper presents the process of obtaining, filtering, and tracking targets to obtain the
 camera’s relative position. The program used computer specific architecture features to optimize
 the program and provide consistent results immediately …</p>
-                <a class="readmore" href="https://cmastudios.github.io/2014/03/01/local-positioning-system-with-multiple-cameras/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2014/03/01/local-positioning-system-with-multiple-cameras/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->
@@ -118,7 +138,7 @@ the program and provide consistent results immediately …</p>
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="https://connormonahan.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="https://github.com/cmastudios">GitHub</a></li>
                             <li><a href="https://www.linkedin.com/in/connor-monahan-a23318146/">LinkedIn</a></li>
@@ -127,11 +147,7 @@ the program and provide consistent results immediately …</p>
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                <p>Design credits: <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>.</p>
         </footer><!-- /#contentinfo -->
 
 </body>

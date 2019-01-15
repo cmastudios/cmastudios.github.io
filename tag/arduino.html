@@ -1,43 +1,63 @@
+<!-- taken mostly from the original pelican theme, added CSS bugfix, removed feeds, added Mathjax, removed credits -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
         <meta charset="utf-8" />
         <title>Connor's Technical Site - arduino</title>
-        <link rel="stylesheet" href="https://cmastudios.github.io/theme/css/main.css" />
-        <link href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Connor's Technical Site Atom Feed" />
+        <link rel="stylesheet" href="https://connormonahan.net/theme/css/main.css" />
+        <style>
+        #banner nav {
+            overflow: hidden;
+            height: auto;
+        }
+        </style>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            "HTML-CSS": { styles: {
+                ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+            },
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes: true}
+        });
+        </script>
+        
+        <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML">
+        </script>
+                        
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="https://cmastudios.github.io/">Connor's Technical Site </a></h1>
+                <h1><a href="https://connormonahan.net/">Connor's Technical Site </a></h1>
                 <nav><ul>
-                    <li><a href="https://cmastudios.github.io/pages/about.html">About</a></li>
-                    <li><a href="https://cmastudios.github.io/pages/programming.html">Programming</a></li>
-                    <li><a href="https://cmastudios.github.io/category/computer-vision.html">Computer Vision</a></li>
-                    <li><a href="https://cmastudios.github.io/category/games.html">Games</a></li>
-                    <li><a href="https://cmastudios.github.io/category/hardware.html">Hardware</a></li>
-                    <li><a href="https://cmastudios.github.io/category/misc.html">Misc</a></li>
-                    <li><a href="https://cmastudios.github.io/category/research.html">Research</a></li>
+                    <li><a href="https://connormonahan.net/pages/about.html">About</a></li>
+                    <li><a href="https://connormonahan.net/pages/programming.html">Programming</a></li>
+                    <li><a href="https://connormonahan.net/category/computer-vision.html">Computer Vision</a></li>
+                    <li><a href="https://connormonahan.net/category/digital-logic.html">Digital Logic</a></li>
+                    <li><a href="https://connormonahan.net/category/games.html">Games</a></li>
+                    <li><a href="https://connormonahan.net/category/hardware.html">Hardware</a></li>
+                    <li><a href="https://connormonahan.net/category/misc.html">Misc</a></li>
+                    <li><a href="https://connormonahan.net/category/research.html">Research</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://cmastudios.github.io/2017/11/11/programming-various-atmel-chips/">Programming various Atmel chips</a></h1>
+                    <h1 class="entry-title"><a href="https://connormonahan.net/2017/11/11/programming-various-atmel-chips/">Programming various Atmel chips</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2017-11-11T20:06:00-06:00">
                 Published: Sat 11 November 2017
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/hardware.html">Hardware</a>.</p>
-<p>tags: <a href="https://cmastudios.github.io/tag/arduino.html">arduino</a> <a href="https://cmastudios.github.io/tag/atmel.html">atmel</a> </p>
+<p>In <a href="https://connormonahan.net/category/hardware.html">Hardware</a>.</p>
+<p>tags: <a href="https://connormonahan.net/tag/arduino.html">arduino</a> <a href="https://connormonahan.net/tag/atmel.html">atmel</a> </p>
 </footer><!-- /.post-info --><p>This is meant to be a compendium of programming guides for a series of useful Atmel chips.</p>
 <p>Diagram of the Arduino Uno, which will be used to program each of these chips:</p>
 <h2>ATmega328P</h2>
-<p>Diagram: <img alt="ATmega328P pinout" src="https://cmastudios.github.io/images/pinoutmega328.png"></p>
+<p>Diagram: <img alt="ATmega328P pinout" src="https://connormonahan.net/images/pinoutmega328.png"></p>
 <h3>One time: burning the bootloader</h3>
 <ol>
 <li>Connect an unwired Arduino to the computer.</li>
@@ -45,14 +65,14 @@
 <li>In Documents/Arduino, create a new folder called &#8220;hardware&#8221;.</li>
 <li>
 <p>Download <a href="https://www.arduino.cc/en/uploads/Tutorial/breadboard-1-6-x.zip">breadboard-1.6.zip</a> and unzip it in the hardware folder. The final directory tree should look like this:</p>
-<p><img alt="Arduino IDE hardware folder structure" src="https://cmastudios.github.io/images/idebootloaders.png"></p>
+<p><img alt="Arduino IDE hardware folder structure" src="https://connormonahan.net/images/idebootloaders.png"></p>
 </li>
 <li>
 <p>Restart the Arduino IDE.</p>
 </li>
 <li>
 <p>Wire the devices as shown.</p>
-<p><img alt="ATmega328P on a breadboard bootloader configuration" src="https://cmastudios.github.io/images/wirediagrammega328.png"></p>
+<p><img alt="ATmega328P on a breadboard bootloader configuration" src="https://connormonahan.net/images/wirediagrammega328.png"></p>
 </li>
 <li>
 <p>Connect a 10 µF capacitor from reset to ground on the Arduino.</p>
@@ -68,7 +88,7 @@
 <li>Set Tools/Programmer to &#8220;Arduino/Genuino Uno&#8221;</li>
 <li>
 <p>Wire the device like shown.</p>
-<p><img alt="ATmega328P on a breadboard programming configuration" src="https://cmastudios.github.io/images/wirediagrammega328.2.png"></p>
+<p><img alt="ATmega328P on a breadboard programming configuration" src="https://connormonahan.net/images/wirediagrammega328.2.png"></p>
 </li>
 <li>
 <p>Press the upload button.</p>
@@ -82,7 +102,7 @@
 <p>Same instructions as for ATmega328P</p>
 <h2>ATtiny84 (14-pin DIP)</h2>
 <p>No bootloader is required.</p>
-<p>Diagram: <img alt="ATtiny84/85 pinout" src="https://cmastudios.github.io/images/pinouttiny8485.png"></p>
+<p>Diagram: <img alt="ATtiny84/85 pinout" src="https://connormonahan.net/images/pinouttiny8485.png"></p>
 <h3>Uploading sketches:</h3>
 <ol>
 <li>Connect an unwired Arduino to the computer.</li>
@@ -92,7 +112,7 @@
 <li>Restart the Arduino IDE.</li>
 <li>
 <p>Wire the board as follows.</p>
-<p><img alt="ATtiny84 on a breadboard programming configuration" src="https://cmastudios.github.io/images/wirediagramtiny84.png"></p>
+<p><img alt="ATtiny84 on a breadboard programming configuration" src="https://connormonahan.net/images/wirediagramtiny84.png"></p>
 </li>
 <li>
 <p>Set Tools/Board to ATtiny24/44/84</p>
@@ -106,7 +126,7 @@
 <p>No bootloader is required.</p>
 <h3>Uploading sketches:</h3>
 <p>Follow the instructions for the ATtiny84. For step 6, wire the board as follows:</p>
-<p><img alt="ATtiny85 on a breadboard programming configuration" src="https://cmastudios.github.io/images/wirediagramtiny85.png"></p>
+<p><img alt="ATtiny85 on a breadboard programming configuration" src="https://connormonahan.net/images/wirediagramtiny85.png"></p>
 <p>For step 7, select ATtiny25/45/85. For step 8, select ATtiny85.</p>
 <p>Sources:</p>
 <ul>
@@ -127,7 +147,7 @@
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="https://connormonahan.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="https://github.com/cmastudios">GitHub</a></li>
                             <li><a href="https://www.linkedin.com/in/connor-monahan-a23318146/">LinkedIn</a></li>
@@ -136,11 +156,7 @@
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                <p>Design credits: <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>.</p>
         </footer><!-- /#contentinfo -->
 
 </body>

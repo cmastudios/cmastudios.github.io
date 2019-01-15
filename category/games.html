@@ -1,39 +1,59 @@
+<!-- taken mostly from the original pelican theme, added CSS bugfix, removed feeds, added Mathjax, removed credits -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
         <meta charset="utf-8" />
         <title>Connor's Technical Site - Games</title>
-        <link rel="stylesheet" href="https://cmastudios.github.io/theme/css/main.css" />
-        <link href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Connor's Technical Site Atom Feed" />
+        <link rel="stylesheet" href="https://connormonahan.net/theme/css/main.css" />
+        <style>
+        #banner nav {
+            overflow: hidden;
+            height: auto;
+        }
+        </style>
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            "HTML-CSS": { styles: {
+                ".MathJax .mo, .MathJax .mi": {color: "black ! important"}}
+            },
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']],processEscapes: true}
+        });
+        </script>
+        
+        <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-AMS_HTML">
+        </script>
+                        
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="https://cmastudios.github.io/">Connor's Technical Site </a></h1>
+                <h1><a href="https://connormonahan.net/">Connor's Technical Site </a></h1>
                 <nav><ul>
-                    <li><a href="https://cmastudios.github.io/pages/about.html">About</a></li>
-                    <li><a href="https://cmastudios.github.io/pages/programming.html">Programming</a></li>
-                    <li><a href="https://cmastudios.github.io/category/computer-vision.html">Computer Vision</a></li>
-                    <li class="active"><a href="https://cmastudios.github.io/category/games.html">Games</a></li>
-                    <li><a href="https://cmastudios.github.io/category/hardware.html">Hardware</a></li>
-                    <li><a href="https://cmastudios.github.io/category/misc.html">Misc</a></li>
-                    <li><a href="https://cmastudios.github.io/category/research.html">Research</a></li>
+                    <li><a href="https://connormonahan.net/pages/about.html">About</a></li>
+                    <li><a href="https://connormonahan.net/pages/programming.html">Programming</a></li>
+                    <li><a href="https://connormonahan.net/category/computer-vision.html">Computer Vision</a></li>
+                    <li><a href="https://connormonahan.net/category/digital-logic.html">Digital Logic</a></li>
+                    <li class="active"><a href="https://connormonahan.net/category/games.html">Games</a></li>
+                    <li><a href="https://connormonahan.net/category/hardware.html">Hardware</a></li>
+                    <li><a href="https://connormonahan.net/category/misc.html">Misc</a></li>
+                    <li><a href="https://connormonahan.net/category/research.html">Research</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://cmastudios.github.io/2018/11/04/0hgame-2018/">Zero Hour Game Jam 2018</a></h1>
+                    <h1 class="entry-title"><a href="https://connormonahan.net/2018/11/04/0hgame-2018/">Zero Hour Game Jam 2018</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2018-11-04T13:11:32+00:00">
                 Published: Sun 04 November 2018
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
-<p>tags: <a href="https://cmastudios.github.io/tag/0hgame.html">0hgame</a> </p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
+<p>tags: <a href="https://connormonahan.net/tag/0hgame.html">0hgame</a> </p>
 </footer><!-- /.post-info --><p>For this year's zero hour game, the idea, art, and concept was designed by
 Julia, who was interested in making a corn dating simulator game.</p>
 <h2>Play the game</h2>
@@ -54,7 +74,7 @@ python3 game.py
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2017/11/05/0hgame-2017/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2017/11/05/0hgame-2017/" rel="bookmark"
                            title="Permalink to Zero Hour Game Jam 2017">Zero Hour Game Jam 2017</a></h1>
                 </header>
 
@@ -69,18 +89,18 @@ python3 game.py
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
-<p>tags: <a href="https://cmastudios.github.io/tag/0hgame.html">0hgame</a> </p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
+<p>tags: <a href="https://connormonahan.net/tag/0hgame.html">0hgame</a> </p>
 </footer><!-- /.post-info -->                <p>Me and Julia's submission "Satan Cart Horror"</p>
-                <a class="readmore" href="https://cmastudios.github.io/2017/11/05/0hgame-2017/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2017/11/05/0hgame-2017/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2015/11/01/0hgame-2015/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2015/11/01/0hgame-2015/" rel="bookmark"
                            title="Permalink to Zero Hour Game Jam 2015">Zero Hour Game Jam 2015</a></h1>
                 </header>
 
@@ -95,18 +115,18 @@ python3 game.py
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
-<p>tags: <a href="https://cmastudios.github.io/tag/0hgame.html">0hgame</a> </p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
+<p>tags: <a href="https://connormonahan.net/tag/0hgame.html">0hgame</a> </p>
 </footer><!-- /.post-info -->                <p>My submission "Radical Harvest Pimps"</p>
-                <a class="readmore" href="https://cmastudios.github.io/2015/11/01/0hgame-2015/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2015/11/01/0hgame-2015/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2014/11/02/0hgame-2014/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2014/11/02/0hgame-2014/" rel="bookmark"
                            title="Permalink to Zero Hour Game Jam 2014">Zero Hour Game Jam 2014</a></h1>
                 </header>
 
@@ -121,18 +141,18 @@ python3 game.py
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
-<p>tags: <a href="https://cmastudios.github.io/tag/0hgame.html">0hgame</a> </p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
+<p>tags: <a href="https://connormonahan.net/tag/0hgame.html">0hgame</a> </p>
 </footer><!-- /.post-info -->                <p>Me and Zac's submission "Future Cyborg Jihad"</p>
-                <a class="readmore" href="https://cmastudios.github.io/2014/11/02/0hgame-2014/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2014/11/02/0hgame-2014/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2014/10/03/debian-network-traffic-monitors/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2014/10/03/debian-network-traffic-monitors/" rel="bookmark"
                            title="Permalink to Debian network traffic monitors">Debian network traffic monitors</a></h1>
                 </header>
 
@@ -143,9 +163,9 @@ python3 game.py
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
 
 </footer><!-- /.post-info -->                <ul>
 <li>"3080702758"
@@ -155,13 +175,13 @@ format: aside</li>
 </ul>
 <hr>
 <p>I have found the tools nload and iptraf to be very helpful when analyzing communications on my linux server. They can be installed in debian/derivatives using the packages bearing their names.</p>
-                <a class="readmore" href="https://cmastudios.github.io/2014/10/03/debian-network-traffic-monitors/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2014/10/03/debian-network-traffic-monitors/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2014/09/21/strange-delays-running-zsh/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2014/09/21/strange-delays-running-zsh/" rel="bookmark"
                            title="Permalink to Strange delays running zsh">Strange delays running zsh</a></h1>
                 </header>
 
@@ -172,9 +192,9 @@ format: aside</li>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
 
 </footer><!-- /.post-info -->                <ul>
 <li>"3042449117"
@@ -183,13 +203,13 @@ categories:</li>
 </ul>
 <hr>
 <p>As a lot of fellow users of the Z-shell, I have oh-my-zsh installed to make installing plugins and themes easier. One issue I was having earlier today was every time I typed a command or pressed return, it would delay for a couple seconds while displaying &#8216;xcodebuild …</p>
-                <a class="readmore" href="https://cmastudios.github.io/2014/09/21/strange-delays-running-zsh/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2014/09/21/strange-delays-running-zsh/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2014/04/08/security-in-the-face-of-ssl-vulnerabilites/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2014/04/08/security-in-the-face-of-ssl-vulnerabilites/" rel="bookmark"
                            title="Permalink to Security in the face of SSL vulnerabilites">Security in the face of SSL vulnerabilites</a></h1>
                 </header>
 
@@ -200,19 +220,19 @@ categories:</li>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
 
 </footer><!-- /.post-info -->                <p>Just yesterday, the news broke of a large exploit in popular software that powers the security of large parts of the internet. Within minutes of hearing about it for the first time, I took action to protect my website, even though it was midnight and I was super tired.</p>
 <p>My …</p>
-                <a class="readmore" href="https://cmastudios.github.io/2014/04/08/security-in-the-face-of-ssl-vulnerabilites/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2014/04/08/security-in-the-face-of-ssl-vulnerabilites/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2014/01/04/why-heuristics-based-antivirus-sucks/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2014/01/04/why-heuristics-based-antivirus-sucks/" rel="bookmark"
                            title="Permalink to Why heuristics-based antivirus sucks">Why heuristics-based antivirus sucks</a></h1>
                 </header>
 
@@ -223,9 +243,9 @@ categories:</li>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
 
 </footer><!-- /.post-info -->                <ul>
 <li>"2098636943"
@@ -234,13 +254,13 @@ categories:</li>
 </ul>
 <hr>
 <p>Today I attempted to download a game I wrote many years ago as a little kid to play again for a small dose of nostalgia. What do I find? Norton removed the file not because it contained a virus, but due to a &#8220;reputation&#8221; algorithm. I would …</p>
-                <a class="readmore" href="https://cmastudios.github.io/2014/01/04/why-heuristics-based-antivirus-sucks/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2014/01/04/why-heuristics-based-antivirus-sucks/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2013/12/01/helpful-guide-to-big-o-notation/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2013/12/01/helpful-guide-to-big-o-notation/" rel="bookmark"
                            title="Permalink to 'Helpful guide to “Big O” notation'">'Helpful guide to &#8220;Big O&#8221; notation'</a></h1>
                 </header>
 
@@ -251,18 +271,18 @@ categories:</li>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
 
 </footer><!-- /.post-info -->                <p>Being the type of person who learns by examples, reading information on Wikipedia and given a synopsis by another person is not enough to totally understand a concept. There is a guide that, in my opinion, gives a nice overview of how this measure of function efficiency works. I recommend …</p>
-                <a class="readmore" href="https://cmastudios.github.io/2013/12/01/helpful-guide-to-big-o-notation/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2013/12/01/helpful-guide-to-big-o-notation/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="https://cmastudios.github.io/2013/11/22/webtranslateit-note-to-self/" rel="bookmark"
+                    <h1><a href="https://connormonahan.net/2013/11/22/webtranslateit-note-to-self/" rel="bookmark"
                            title="Permalink to WebTranslateIt Note to Self">WebTranslateIt Note to Self</a></h1>
                 </header>
 
@@ -273,9 +293,9 @@ categories:</li>
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="https://cmastudios.github.io/author/connor-monahan.html">Connor Monahan</a>
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
         </address>
-<p>In <a href="https://cmastudios.github.io/category/games.html">Games</a>.</p>
+<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
 
 </footer><!-- /.post-info -->                <ul>
 <li>"2103615839"
@@ -284,13 +304,13 @@ categories:</li>
 </ul>
 <hr>
 <p>Never upload a file to http://webtranslateit.com from a windows computer. I just spent a lot of time recovering from an accident where I tried to download the latest version of translations to my netbook and update the translation manager from there. It caused a lot …</p>
-                <a class="readmore" href="https://cmastudios.github.io/2013/11/22/webtranslateit-note-to-self/">read more</a>
+                <a class="readmore" href="https://connormonahan.net/2013/11/22/webtranslateit-note-to-self/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->
 <p class="paginator">
     Page 1 / 4
-        <a href="https://cmastudios.github.io/category/games2.html">&raquo;</a>
+        <a href="https://connormonahan.net/category/games2.html">&raquo;</a>
 </p>
                 </section><!-- /#content -->
         <section id="extras" class="body">
@@ -304,7 +324,7 @@ categories:</li>
                 <div class="social">
                         <h2>social</h2>
                         <ul>
-                            <li><a href="https://cmastudios.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="https://connormonahan.net/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
                             <li><a href="https://github.com/cmastudios">GitHub</a></li>
                             <li><a href="https://www.linkedin.com/in/connor-monahan-a23318146/">LinkedIn</a></li>
@@ -313,11 +333,7 @@ categories:</li>
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                <p>Design credits: <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>.</p>
         </footer><!-- /#contentinfo -->
 
 </body>
