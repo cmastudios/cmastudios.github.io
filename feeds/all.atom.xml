@@ -1,5 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Connor's Technical Site</title><link href="https://connormonahan.net/" rel="alternate"></link><link href="https://connormonahan.net/feeds/all.atom.xml" rel="self"></link><id>https://connormonahan.net/</id><updated>2019-01-14T00:00:00-06:00</updated><entry><title>Binary, Decimal, Hexadecimal</title><link href="https://connormonahan.net/2019/01/14/binary-decimal-hexadecimal/" rel="alternate"></link><published>2019-01-14T00:00:00-06:00</published><updated>2019-01-14T00:00:00-06:00</updated><author><name>Connor Monahan</name></author><id>tag:connormonahan.net,2019-01-14:/2019/01/14/binary-decimal-hexadecimal/</id><summary type="html">&lt;h1&gt;Representation of different bases, and converting to decimal&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Connor's Technical Site</title><link href="https://connormonahan.net/" rel="alternate"></link><link href="https://connormonahan.net/feeds/all.atom.xml" rel="self"></link><id>https://connormonahan.net/</id><updated>2019-07-12T08:30:00-05:00</updated><entry><title>Chicken Noel</title><link href="https://connormonahan.net/2019/07/12/chicken-noel/" rel="alternate"></link><published>2019-07-12T08:30:00-05:00</published><updated>2019-07-12T08:30:00-05:00</updated><author><name>Connor Monahan</name></author><id>tag:connormonahan.net,2019-07-12:/2019/07/12/chicken-noel/</id><summary type="html">&lt;p&gt;Recipe imported from some 40+ year old cookbook, posted for personal use under Fair Use doctrines.&lt;/p&gt;
+&lt;p&gt;Time: 
+- Preparing: 15min
+- Baking: 1hr&lt;/p&gt;
+&lt;p&gt;Servings: 4&lt;/p&gt;
+&lt;p&gt;Ingredients:
+- 2 large, whole chicken breasts
+- 1 can mushroom soup
+- 1 cup sour cream
+- 1 cup sherry
+- 2 packages frozen broccoli
+- 1/2 lemon
+- paprika
+- butter
+- 3 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recipe imported from some 40+ year old cookbook, posted for personal use under Fair Use doctrines.&lt;/p&gt;
+&lt;p&gt;Time: 
+- Preparing: 15min
+- Baking: 1hr&lt;/p&gt;
+&lt;p&gt;Servings: 4&lt;/p&gt;
+&lt;p&gt;Ingredients:
+- 2 large, whole chicken breasts
+- 1 can mushroom soup
+- 1 cup sour cream
+- 1 cup sherry
+- 2 packages frozen broccoli
+- 1/2 lemon
+- paprika
+- butter
+- 3 cups rice (&amp;amp; 3 cups water)&lt;/p&gt;
+&lt;p&gt;Preheat: 350℉&lt;/p&gt;
+&lt;p&gt;Instructions:
+1. Cook broccoli according to package directions
+2. Butter casserole dish and place broccoli in dish
+3. Pour lemon juice over broccoli
+4. Cut chicken breasts in half laterally
+5. Place chicken breasts skin side up in dish
+6. Mix soup, sour cream, and sherry sauce
+7. Pour sauce over chicken and sprinkle tons of paprika
+8. Bake 350℉ for 1 hour
+9. Mix rice and water, cook for 40 min&lt;/p&gt;
+&lt;p&gt;Tools needed:
+- Casserole dish
+- Rice cooker
+- Lemon juicer
+- Knife
+- Can opener&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Parallel operations" src="https://connormonahan.net/images/cn.png"&gt;&lt;/p&gt;</content><category term="recipe"></category></entry><entry><title>Binary, Decimal, Hexadecimal</title><link href="https://connormonahan.net/2019/01/14/binary-decimal-hexadecimal/" rel="alternate"></link><published>2019-01-14T00:00:00-06:00</published><updated>2019-01-14T00:00:00-06:00</updated><author><name>Connor Monahan</name></author><id>tag:connormonahan.net,2019-01-14:/2019/01/14/binary-decimal-hexadecimal/</id><summary type="html">&lt;h1&gt;Representation of different bases, and converting to decimal&lt;/h1&gt;
 &lt;h2&gt;Decimal&lt;/h2&gt;
 &lt;p&gt;We think of decimal as the base-10 system. The set of all decimal digits is $\{0,1,2,3,4,5,6,7,8,9\}$.&lt;/p&gt;
 &lt;p&gt;Imagine we have a number 42 (base ten). We could rewrite it as each digit multiplied …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Representation of different bases, and converting to decimal&lt;/h1&gt;

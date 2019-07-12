@@ -43,7 +43,63 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://connormonahan.net/2019/01/14/binary-decimal-hexadecimal/">Binary, Decimal, Hexadecimal</a></h1>
+                    <h1 class="entry-title"><a href="https://connormonahan.net/2019/07/12/chicken-noel/">Chicken Noel</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2019-07-12T08:30:00-05:00">
+                Published: Fri 12 July 2019
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
+        </address>
+<p>In <a href="https://connormonahan.net/category/misc.html">Misc</a>.</p>
+<p>tags: <a href="https://connormonahan.net/tag/recipe.html">recipe</a> </p>
+</footer><!-- /.post-info --><p>Recipe imported from some 40+ year old cookbook, posted for personal use under Fair Use doctrines.</p>
+<p>Time: 
+- Preparing: 15min
+- Baking: 1hr</p>
+<p>Servings: 4</p>
+<p>Ingredients:
+- 2 large, whole chicken breasts
+- 1 can mushroom soup
+- 1 cup sour cream
+- 1 cup sherry
+- 2 packages frozen broccoli
+- 1/2 lemon
+- paprika
+- butter
+- 3 cups rice (&amp; 3 cups water)</p>
+<p>Preheat: 350℉</p>
+<p>Instructions:
+1. Cook broccoli according to package directions
+2. Butter casserole dish and place broccoli in dish
+3. Pour lemon juice over broccoli
+4. Cut chicken breasts in half laterally
+5. Place chicken breasts skin side up in dish
+6. Mix soup, sour cream, and sherry sauce
+7. Pour sauce over chicken and sprinkle tons of paprika
+8. Bake 350℉ for 1 hour
+9. Mix rice and water, cook for 40 min</p>
+<p>Tools needed:
+- Casserole dish
+- Rice cooker
+- Lemon juicer
+- Knife
+- Can opener</p>
+<p><img alt="Parallel operations" src="https://connormonahan.net/images/cn.png"></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://connormonahan.net/2019/01/14/binary-decimal-hexadecimal/" rel="bookmark"
+                           title="Permalink to Binary, Decimal, Hexadecimal">Binary, Decimal, Hexadecimal</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2019-01-14T00:00:00-06:00">
                 Published: Mon 14 January 2019
@@ -54,58 +110,13 @@
         </address>
 <p>In <a href="https://connormonahan.net/category/digital-logic.html">Digital Logic</a>.</p>
 
-</footer><!-- /.post-info --><h1>Representation of different bases, and converting to decimal</h1>
+</footer><!-- /.post-info -->                <h1>Representation of different bases, and converting to decimal</h1>
 <h2>Decimal</h2>
 <p>We think of decimal as the base-10 system. The set of all decimal digits is $\{0,1,2,3,4,5,6,7,8,9\}$.</p>
-<p>Imagine we have a number 42 (base ten). We could rewrite it as each digit multiplied by a power of ten, like so: $42 = 4 * 10^1 + 2 * 10^0$.</p>
-<h2>Binary</h2>
-<p>The set of all binary digits is $\{0,1\}$.</p>
-<p>The same idea is true for binary numbers, also known as the base-2 system. Imagine we have a number 101010 (base two). We could rewrite it as each digit multiplied by a power of two, like so: $101010_2 = 1 * 2^5 + 0 * 2^4 + 1 * 2^3 + 0 * 2^2 + 1 * 2^1 + 0 * 2^0$. If we wanted to get the decimal version of this, we could just simplify: $1 * 2^5 + 1 * 2^3 + 1 * 2^1 = 32 + 8 + 2=42$.</p>
-<h2>Hexadecimal</h2>
-<p>The set of all hexadecimal digits is $\{0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F\}$, where A-F have decimal values of 10-15 respectively.</p>
-<p>The same idea is true for hexadecimal numbers, also known as the base-16 system. Imagine we have a number 2A (base sixteen). We could rewrite it as each digit multiplied by a power of sixteen, like so: $2A_{16} = 2 * 16^1 + 10 * 16^0$. If we wanted to get the decimal version of this, we could just simplify: $2 * 16^1 + 10 * 16^0 = 32 + 10 = 42$.</p>
-<h2>Bringing it together: binary and hexadecimal to decimal</h2>
-<p>Above, we have seen that finding the value of a binary or hexadecimal number in decimal simply requires writing out each digit multiplied by its place value and then simplifying.</p>
-<h1>Converting decimal to binary or hexadecimal by repeated division</h1>
-<p>A technique for converting to either binary or hexadecimal is to take the number in decimal and successively divide by either 2 or 16 (depending on the target base), using the remainders to construct the resultant number. Say we want to convert 42 to binary. We would start to divide by 2:</p>
-<!-- thanks https://stackoverflow.com/questions/22867785 --->
-
-<p>$$
-\require{enclose}
-\begin{array}{rll}
-    21\\[-3pt]
-   2 \enclose{longdiv}{42}\kern-.2ex \\[-3pt]
-      \underline{42}  \\[-3pt]
-      0 \\[-3pt]
-  \end{array}
-$$</p>
-<p>Now, we know that the rightmost digit of the resulting binary number is 0, as that is the remainder of the division. We continue by dividing the previous quotient again:</p>
-<p>$$
-\require{enclose}
-\begin{array}{rll}
-    10\\[-3pt]
-   2 \enclose{longdiv}{21}\kern-.2ex \\[-3pt]
-      \underline{20}  \\[-3pt]
-      1 \\[-3pt]
-  \end{array}
-$$</p>
-<p>The remainder is 1, so the next digit to the left is a 1. Continue dividing until the quotient is 0 (the intermediate three divisions are left as an exercise for the reader):</p>
-<p>$$
-\require{enclose}
-\begin{array}{rll}
-    0\\[-3pt]
-   2 \enclose{longdiv}{1}\kern-.2ex \\[-3pt]
-      \underline{0}  \\[-3pt]
-      1 \\[-3pt]
-  \end{array}
-$$</p>
-<p>The final remainder is 1, so the leftmost digit of the resulting binary number is 1. Writing all the results next to each other, we get a result of 101010.</p>
-<p>The same technique works for converting to hexadecimal (simply divide by 16 repeatedly instead of 2). This technique generalizes to other bases as well.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<p>Imagine we have a number 42 (base ten). We could rewrite it as each digit multiplied …</p>
+                <a class="readmore" href="https://connormonahan.net/2019/01/14/binary-decimal-hexadecimal/">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -302,32 +313,6 @@ format: link</li>
 classifying n-objects in a spatial image. Other methods of spatial image segmentation, for
 example the Laplacian operator and support vector machines (SVM …</p>
                 <a class="readmore" href="https://connormonahan.net/2016/01/10/depth-image-segmentation-using-statistical-methods/">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="https://connormonahan.net/2015/11/01/0hgame-2015/" rel="bookmark"
-                           title="Permalink to Zero Hour Game Jam 2015">Zero Hour Game Jam 2015</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2015-11-01T02:16:03+00:00">
-                Published: Sun 01 November 2015
-        </abbr>
-		<br />
-        <abbr class="modified" title="2018-12-23T18:09:00-06:00">
-                Updated: Sun 23 December 2018
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="https://connormonahan.net/author/connor-monahan.html">Connor Monahan</a>
-        </address>
-<p>In <a href="https://connormonahan.net/category/games.html">Games</a>.</p>
-<p>tags: <a href="https://connormonahan.net/tag/0hgame.html">0hgame</a> </p>
-</footer><!-- /.post-info -->                <p>My submission "Radical Harvest Pimps"</p>
-                <a class="readmore" href="https://connormonahan.net/2015/11/01/0hgame-2015/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->
