@@ -1,50 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Connor's Technical Site</title><link href="https://connormonahan.net/" rel="alternate"></link><link href="https://connormonahan.net/feeds/all.atom.xml" rel="self"></link><id>https://connormonahan.net/</id><updated>2019-07-12T08:30:00-05:00</updated><entry><title>Chicken Noel</title><link href="https://connormonahan.net/2019/07/12/chicken-noel/" rel="alternate"></link><published>2019-07-12T08:30:00-05:00</published><updated>2019-07-12T08:30:00-05:00</updated><author><name>Connor Monahan</name></author><id>tag:connormonahan.net,2019-07-12:/2019/07/12/chicken-noel/</id><summary type="html">&lt;p&gt;Recipe imported from some 40+ year old cookbook, posted for personal use under Fair Use doctrines.&lt;/p&gt;
 &lt;p&gt;Time: 
-- Preparing: 15min
-- Baking: 1hr&lt;/p&gt;
+Preparing: 15min,
+Baking: 1hr&lt;/p&gt;
 &lt;p&gt;Servings: 4&lt;/p&gt;
-&lt;p&gt;Ingredients:
-- 2 large, whole chicken breasts
-- 1 can mushroom soup
-- 1 cup sour cream
-- 1 cup sherry
-- 2 packages frozen broccoli
-- 1/2 lemon
-- paprika
-- butter
-- 3 …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recipe imported from some 40+ year old cookbook, posted for personal use under Fair Use doctrines.&lt;/p&gt;
-&lt;p&gt;Time: 
-- Preparing: 15min
-- Baking: 1hr&lt;/p&gt;
-&lt;p&gt;Servings: 4&lt;/p&gt;
-&lt;p&gt;Ingredients:
-- 2 large, whole chicken breasts
-- 1 can mushroom soup
-- 1 cup sour cream
-- 1 cup sherry
-- 2 packages frozen broccoli
-- 1/2 lemon
-- paprika
-- butter
-- 3 cups rice (&amp;amp; 3 cups water)&lt;/p&gt;
 &lt;p&gt;Preheat: 350℉&lt;/p&gt;
-&lt;p&gt;Instructions:
-1. Cook broccoli according to package directions
-2. Butter casserole dish and place broccoli in dish
-3. Pour lemon juice over broccoli
-4. Cut chicken breasts in half laterally
-5. Place chicken breasts skin side up in dish
-6. Mix soup, sour cream, and sherry sauce
-7. Pour sauce over chicken and sprinkle tons of paprika
-8. Bake 350℉ for 1 hour
-9. Mix rice and water, cook for 40 min&lt;/p&gt;
-&lt;p&gt;Tools needed:
-- Casserole dish
-- Rice cooker
-- Lemon juicer
-- Knife
-- Can opener&lt;/p&gt;
+&lt;h1&gt;Ingredients:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;2 large, whole chicken breasts&lt;/li&gt;
+&lt;li&gt;1 can mushroom soup&lt;/li&gt;
+&lt;li&gt;1 cup sour cream&lt;/li&gt;
+&lt;li&gt;1 cup sherry&lt;/li&gt;
+&lt;li&gt;2 packages frozen broccoli&lt;/li&gt;
+&lt;li&gt;1/2 lemon&lt;/li&gt;
+&lt;li&gt;paprika …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Recipe imported from some 40+ year old cookbook, posted for personal use under Fair Use doctrines.&lt;/p&gt;
+&lt;p&gt;Time: 
+Preparing: 15min,
+Baking: 1hr&lt;/p&gt;
+&lt;p&gt;Servings: 4&lt;/p&gt;
+&lt;p&gt;Preheat: 350℉&lt;/p&gt;
+&lt;h1&gt;Ingredients:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;2 large, whole chicken breasts&lt;/li&gt;
+&lt;li&gt;1 can mushroom soup&lt;/li&gt;
+&lt;li&gt;1 cup sour cream&lt;/li&gt;
+&lt;li&gt;1 cup sherry&lt;/li&gt;
+&lt;li&gt;2 packages frozen broccoli&lt;/li&gt;
+&lt;li&gt;1/2 lemon&lt;/li&gt;
+&lt;li&gt;paprika&lt;/li&gt;
+&lt;li&gt;butter&lt;/li&gt;
+&lt;li&gt;3 cups rice (&amp;amp; 3 cups water)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1&gt;Instructions:&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Cook broccoli according to package directions&lt;/li&gt;
+&lt;li&gt;Butter casserole dish and place broccoli in dish&lt;/li&gt;
+&lt;li&gt;Pour lemon juice over broccoli&lt;/li&gt;
+&lt;li&gt;Cut chicken breasts in half laterally&lt;/li&gt;
+&lt;li&gt;Place chicken breasts skin side up in dish&lt;/li&gt;
+&lt;li&gt;Mix soup, sour cream, and sherry sauce&lt;/li&gt;
+&lt;li&gt;Pour sauce over chicken and sprinkle tons of paprika&lt;/li&gt;
+&lt;li&gt;Bake 350℉ for 1 hour&lt;/li&gt;
+&lt;li&gt;Mix rice and water, cook for 40 min&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;Tools needed:&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Casserole dish&lt;/li&gt;
+&lt;li&gt;Rice cooker&lt;/li&gt;
+&lt;li&gt;Lemon juicer&lt;/li&gt;
+&lt;li&gt;Knife&lt;/li&gt;
+&lt;li&gt;Can opener&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;img alt="Parallel operations" src="https://connormonahan.net/images/cn.png"&gt;&lt;/p&gt;</content><category term="recipe"></category></entry><entry><title>Binary, Decimal, Hexadecimal</title><link href="https://connormonahan.net/2019/01/14/binary-decimal-hexadecimal/" rel="alternate"></link><published>2019-01-14T00:00:00-06:00</published><updated>2019-01-14T00:00:00-06:00</updated><author><name>Connor Monahan</name></author><id>tag:connormonahan.net,2019-01-14:/2019/01/14/binary-decimal-hexadecimal/</id><summary type="html">&lt;h1&gt;Representation of different bases, and converting to decimal&lt;/h1&gt;
 &lt;h2&gt;Decimal&lt;/h2&gt;
 &lt;p&gt;We think of decimal as the base-10 system. The set of all decimal digits is $\{0,1,2,3,4,5,6,7,8,9\}$.&lt;/p&gt;
