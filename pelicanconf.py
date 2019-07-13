@@ -37,6 +37,9 @@ STATIC_PATHS = ['images', 'pdfs']
 ARTICLE_SAVE_AS = '{date:%Y}/{date:%m}/{date:%d}/{slug}/index.html'
 ARTICLE_URL = '{date:%Y}/{date:%m}/{date:%d}/{slug}/'
 
-EXTRA_PATH_METADATA = {'images/favicon.ico': {'path': 'favicon.ico'},}
+EXTRA_PATH_METADATA = {
+    'images/favicon.ico': {'path': 'favicon.ico'},
+    'images/CNAME': {'path': 'CNAME'},
+}
 
 THEME_TEMPLATES_OVERRIDES = ['templates']
