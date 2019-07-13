@@ -6,12 +6,15 @@ Author: Connor Monahan
 Recipe imported from some 40+ year old cookbook, posted for personal use under Fair Use doctrines.
 
 Time: 
-- Preparing: 15min
-- Baking: 1hr
+Preparing: 15min,
+Baking: 1hr
 
 Servings: 4
 
+Preheat: 350℉
+
 Ingredients:
+===
 - 2 large, whole chicken breasts
 - 1 can mushroom soup
 - 1 cup sour cream
@@ -22,9 +25,9 @@ Ingredients:
 - butter
 - 3 cups rice (& 3 cups water)
 
-Preheat: 350℉
 
 Instructions:
+===
 1. Cook broccoli according to package directions
 2. Butter casserole dish and place broccoli in dish
 3. Pour lemon juice over broccoli
@@ -36,6 +39,7 @@ Instructions:
 9. Mix rice and water, cook for 40 min
 
 Tools needed:
+===
 - Casserole dish
 - Rice cooker
 - Lemon juicer
