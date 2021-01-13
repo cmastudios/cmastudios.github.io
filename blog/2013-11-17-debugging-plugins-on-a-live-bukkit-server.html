@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Connor Monahan" />
+  <title>Debugging plugins on a live Bukkit server</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../stylesheets/base.css">
+</head>
+<body>
+<main>
+      <a href="./">Back</a>
+<header id="title-block-header">
+<h1 class="title">Debugging plugins on a live Bukkit server</h1>
+<p class="author">Connor Monahan</p>
+<p class="date">2013-11-17T22:55:32+00:00</p>
+</header>
+<blockquote>
+<p>&lt;tommytony&gt; java -Xms2048M -Xmx2048M -Xdebug -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=y -jar craftbukkit-1.6.4-R2.0.jar<br />
+&lt;tommytony&gt; then create a new Debug Configuration in eclipse<br />
+&lt;tommytony&gt; choose Remote Java Application<br />
+&lt;tommytony&gt; set port 8787<br />
+&lt;tommytony&gt; run that debug profile from eclipse<br />
+&lt;tommytony&gt; your server should start<br />
+&lt;tommytony&gt; and you can breakpoint</p>
+</blockquote>
+</main>
+</body>
+</html>

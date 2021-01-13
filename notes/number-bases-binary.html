@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Connor Monahan" />
+  <meta name="dcterms.date" content="2019-01-14" />
+  <title>Binary, Decimal, Hexadecimal</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../stylesheets/base.css">
+</head>
+<body>
+<main>
+      <a href="..">Back to Home</a>
+<header id="title-block-header">
+<h1 class="title">Binary, Decimal, Hexadecimal</h1>
+<p class="author">Connor Monahan</p>
+<p class="date">2019-01-14</p>
+</header>
+<h1 id="representation-of-different-bases-and-converting-to-decimal">Representation of different bases, and converting to decimal</h1>
+<h2 id="decimal">Decimal</h2>
+<p>We think of decimal as the base-10 system. The set of all decimal digits is <span class="math inline">\(\{0,1,2,3,4,5,6,7,8,9\}\)</span>.</p>
+<p>Imagine we have a number 42 (base ten). We could rewrite it as each digit multiplied by a power of ten, like so: <span class="math inline">\(42 = 4 * 10^1 + 2 * 10^0\)</span>.</p>
+<h2 id="binary">Binary</h2>
+<p>The set of all binary digits is <span class="math inline">\(\{0,1\}\)</span>.</p>
+<p>The same idea is true for binary numbers, also known as the base-2 system. Imagine we have a number 101010 (base two). We could rewrite it as each digit multiplied by a power of two, like so: <span class="math inline">\(101010_2 = 1 * 2^5 + 0 * 2^4 + 1 * 2^3 + 0 * 2^2 + 1 * 2^1 + 0 * 2^0\)</span>. If we wanted to get the decimal version of this, we could just simplify: <span class="math inline">\(1 * 2^5 + 1 * 2^3 + 1 * 2^1 = 32 + 8 + 2=42\)</span>.</p>
+<h2 id="hexadecimal">Hexadecimal</h2>
+<p>The set of all hexadecimal digits is <span class="math inline">\(\{0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F\}\)</span>, where A-F have decimal values of 10-15 respectively.</p>
+<p>The same idea is true for hexadecimal numbers, also known as the base-16 system. Imagine we have a number 2A (base sixteen). We could rewrite it as each digit multiplied by a power of sixteen, like so: <span class="math inline">\(2A_{16} = 2 * 16^1 + 10 * 16^0\)</span>. If we wanted to get the decimal version of this, we could just simplify: <span class="math inline">\(2 * 16^1 + 10 * 16^0 = 32 + 10 = 42\)</span>.</p>
+<h2 id="bringing-it-together-binary-and-hexadecimal-to-decimal">Bringing it together: binary and hexadecimal to decimal</h2>
+<p>Above, we have seen that finding the value of a binary or hexadecimal number in decimal simply requires writing out each digit multiplied by its place value and then simplifying.</p>
+<h1 id="converting-decimal-to-binary-or-hexadecimal-by-repeated-division">Converting decimal to binary or hexadecimal by repeated division</h1>
+<p>A technique for converting to either binary or hexadecimal is to take the number in decimal and successively divide by either 2 or 16 (depending on the target base), using the remainders to construct the resultant number. Say we want to convert 42 to binary. We would start to divide by 2:</p>
+<!-- thanks https://stackoverflow.com/questions/22867785 --->
+<p><span class="math display">\[
+\require{enclose}
+\begin{array}{rll}
+    21\\[-3pt]
+   2 \enclose{longdiv}{42}\kern-.2ex \\[-3pt]
+      \underline{42}  \\[-3pt]
+      0 \\[-3pt]
+  \end{array}
+\]</span></p>
+<p>Now, we know that the rightmost digit of the resulting binary number is 0, as that is the remainder of the division. We continue by dividing the previous quotient again:</p>
+<p><span class="math display">\[
+\require{enclose}
+\begin{array}{rll}
+    10\\[-3pt]
+   2 \enclose{longdiv}{21}\kern-.2ex \\[-3pt]
+      \underline{20}  \\[-3pt]
+      1 \\[-3pt]
+  \end{array}
+\]</span></p>
+<p>The remainder is 1, so the next digit to the left is a 1. Continue dividing until the quotient is 0 (the intermediate three divisions are left as an exercise for the reader):</p>
+<p><span class="math display">\[
+\require{enclose}
+\begin{array}{rll}
+    0\\[-3pt]
+   2 \enclose{longdiv}{1}\kern-.2ex \\[-3pt]
+      \underline{0}  \\[-3pt]
+      1 \\[-3pt]
+  \end{array}
+\]</span></p>
+<p>The final remainder is 1, so the leftmost digit of the resulting binary number is 1. Writing all the results next to each other, we get a result of 101010.</p>
+<p>The same technique works for converting to hexadecimal (simply divide by 16 repeatedly instead of 2). This technique generalizes to other bases as well.</p>
+</main>
+</body>
+</html>

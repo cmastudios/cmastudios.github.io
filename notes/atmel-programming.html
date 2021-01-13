@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Programming various Atmel chips</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../stylesheets/base.css">
+</head>
+<body>
+<main>
+      <a href="./">Back</a>
+<header id="title-block-header">
+<h1 class="title">Programming various Atmel chips</h1>
+<p class="date">2017-11-11 20:06</p>
+</header>
+<p>This is meant to be a compendium of programming guides for a series of useful Atmel chips.</p>
+<p>Diagram of the Arduino Uno, which will be used to program each of these chips:</p>
+<h2 id="atmega328p">ATmega328P</h2>
+<p>Diagram: <img src="../images/pinoutmega328.png" alt="ATmega328P pinout" /></p>
+<h3 id="one-time-burning-the-bootloader">One time: burning the bootloader</h3>
+<ol type="1">
+<li><p>Connect an unwired Arduino to the computer.</p></li>
+<li><p>Set Tools/Board to “Arduino/Genuino Uno” and upload the example ArduinoISP sketch.</p></li>
+<li><p>In Documents/Arduino, create a new folder called “hardware”.</p></li>
+<li><p>Download <a href="https://www.arduino.cc/en/uploads/Tutorial/breadboard-1-6-x.zip">breadboard-1.6.zip</a> and unzip it in the hardware folder. The final directory tree should look like this:</p>
+<figure>
+<img src="../images/idebootloaders.png" alt="" /><figcaption>Arduino IDE hardware folder structure</figcaption>
+</figure></li>
+<li><p>Restart the Arduino IDE.</p></li>
+<li><p>Wire the devices as shown.</p>
+<figure>
+<img src="../images/wirediagrammega328.png" alt="" /><figcaption>ATmega328P on a breadboard bootloader configuration</figcaption>
+</figure></li>
+<li><p>Connect a 10 µF capacitor from reset to ground on the Arduino.</p></li>
+<li><p>Set Tools/Board to “ATmega328 on a breadboard (8MHz internal)”.</p></li>
+<li><p>Set Tools/Programmer to “Arduino as ISP”</p></li>
+<li><p>Click Tools/Burn Bootloader.</p></li>
+<li><p>Post the error it gives you in the comments below. (hopefully none)</p></li>
+</ol>
+<h3 id="every-time-uploading-sketches">Every time: uploading sketches</h3>
+<ol type="1">
+<li><p>Set Tools/Board to “ATmega328 on a breadboard (8MHz internal)”.</p></li>
+<li><p>Set Tools/Programmer to “Arduino/Genuino Uno”</p></li>
+<li><p>Wire the device like shown.</p>
+<figure>
+<img src="../images/wirediagrammega328.2.png" alt="" /><figcaption>ATmega328P on a breadboard programming configuration</figcaption>
+</figure></li>
+<li><p>Press the upload button.</p></li>
+</ol>
+<h2 id="atmega328-without-the-p">ATmega328 (without the P)</h2>
+<p>Seriously consider buying a regular ATmega328P unless this is all they have at your local electronics store.</p>
+<h3 id="one-time-burning-the-bootloader-1">One time: burning the bootloader</h3>
+<p>Follow the same instructions as for ATmega328P, but after step 3 edit “boards.txt” within Arduino/hardware/breadboard/avr. Find the line that reads “atmega328bb.build.mcu=atmega328p” and change atmega328<strong>p</strong> to atmega328. After step 9, revert this change (the bootloader causes the chip to respond in the same way as a ATmega328P).</p>
+<h3 id="every-time-uploading-sketches-1">Every time: uploading sketches</h3>
+<p>Same instructions as for ATmega328P</p>
+<h2 id="attiny84-14-pin-dip">ATtiny84 (14-pin DIP)</h2>
+<p>No bootloader is required.</p>
+<p>Diagram: <img src="../images/pinouttiny8485.png" alt="ATtiny84/85 pinout" /></p>
+<h3 id="uploading-sketches">Uploading sketches:</h3>
+<ol type="1">
+<li><p>Connect an unwired Arduino to the computer.</p></li>
+<li><p>Set Tools/Board to “Arduino/Genuino Uno” and upload the example ArduinoISP sketch.</p></li>
+<li><p>Open Arduino’s preferences. In Additional Boards Manager URLs, insert <code>https://raw.githubusercontent.com/damellis/attiny/ide-1.6.x-boards-manager/package_damellis_attiny_index.json</code> and press OK.</p></li>
+<li><p>Go to Tools/Boards/Boards Manager. Search for attiny. Click the first result and press Install.</p></li>
+<li><p>Restart the Arduino IDE.</p></li>
+<li><p>Wire the board as follows.</p>
+<figure>
+<img src="../images/wirediagramtiny84.png" alt="" /><figcaption>ATtiny84 on a breadboard programming configuration</figcaption>
+</figure></li>
+<li><p>Set Tools/Board to ATtiny24/44/84</p></li>
+<li><p>Set Tools/Processer to ATtiny84</p></li>
+<li><p>Set Tools/Clock to 1MHz</p></li>
+<li><p>Set Tools/Programmer to Arduino as ISP.</p></li>
+<li><p>Click Sketch/Upload using Programmer.</p></li>
+</ol>
+<h2 id="attiny85-8-pin-dip">ATtiny85 (8-pin DIP)</h2>
+<p>No bootloader is required.</p>
+<h3 id="uploading-sketches-1">Uploading sketches:</h3>
+<p>Follow the instructions for the ATtiny84. For step 6, wire the board as follows:</p>
+<figure>
+<img src="../images/wirediagramtiny85.png" alt="" /><figcaption>ATtiny85 on a breadboard programming configuration</figcaption>
+</figure>
+<p>For step 7, select ATtiny25/45/85. For step 8, select ATtiny85.</p>
+<p>Sources:</p>
+<ul>
+<li>https://www.arduino.cc/en/Tutorial/ArduinoToBreadboard</li>
+<li>http://42bots.com/tutorials/programming-attiny84-attiny44-with-arduino-uno/</li>
+<li>http://42bots.com/tutorials/how-to-program-attiny85-with-arduino-uno-part-1/</li>
+<li>http://www.pighixxx.com/</li>
+</ul>
+</main>
+</body>
+</html>

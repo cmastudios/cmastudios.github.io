@@ -1,0 +1,34 @@
+
+
+img.profile {
+  max-width: 100%;
+}
+
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid black;
+}
+nav li {
+  display: flex;
+}
+nav li:first-child {
+  flex-grow: 1;
+}
+nav a {
+  display: block;
+  height: 20px;
+  padding: 10px;
+  text-align: center;
+  color: inherit;
+}
+
+nav a:link, nav a:visited, nav a:hover, nav a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav a:hover, nav a:active {
+  background-color: gray;
+}
