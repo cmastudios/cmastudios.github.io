@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Connor Monahan" />
+  <meta name="dcterms.date" content="2020-09-27" />
+  <title>Like MNIST, but for 7-segment displays</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="../stylesheets/base.css">
+</head>
+<body>
+<main>
+      <a href="./">Back</a>
+<header id="title-block-header">
+<h1 class="title">Like MNIST, but for 7-segment displays</h1>
+<p class="author">Connor Monahan</p>
+<p class="date">2020-09-27</p>
+</header>
+<p>The original venue for this post is on <a href="https://np.reddit.com/r/MachineLearning/comments/j10ub1/p_like_mnist_but_for_7segment_displays/">r/MachineLearning</a>, reposted here as I have a working blog now.</p>
+<p>I was recently working on a data analysis project, part of which needed to detect the value of a seven segment display. I started by applying an MNIST-trained model, but the error was very high. I went looking for a different dataset and was not finding any easily accessible ones. Eventually, I found this <a href="https://bitbucket.org/eoinf96/7-segmentdigitgenerator/src/master/">image generator</a> that was designed to create datasets with seven segment display computer-generated images. I used it to create a dataset with ~17k samples, 0-9 digits. It worked well for my project, where I applied it with a random forest model. I don’t plan to write a paper so thought I’d leave the dataset here, to save someone else a few hours if faced with a similar task.</p>
+<p>Link to dataset:
+<a href="https://s3.us-east-2.amazonaws.com/public.connor.money/sevensegdataset.npy">
+	sevensegdataset.npy</a>
+</p>
+<p>Images are 28x28, flattened here.</p>
+<pre><code>features = np.load(&quot;sevensegdataset.npy&quot;)
+X = features[:, :-1]
+Y = features[:, -1]</code></pre>
+</main>
+</body>
+</html>
