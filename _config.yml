@@ -19,12 +19,12 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Connor Monahan
-email: cmonahan@wustl.edu
+email: cma2714@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   The research, projects, and other notes from Connor.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://connormonahan.net" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
+twitter_username: cmastudios
 github_username:  cmastudios
 linkedin_username: connor-monahan-a23318146
 

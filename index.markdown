@@ -4,15 +4,15 @@
 
 layout: home
 ---
-<img class="profile" alt="Connor Profile" src="images/profile.jpg">
-<div class="description">
-<p>Hi, my name is Connor Monahan.</p>
-<p>I am a student at Washington University in St. Louis. I am interested in computer vision, machine learning, and embedded/real-time software applications.</p>
-<p>Follow me on</p>
-<ul>
-  <li><a href="https://github.com/cmastudios">My GitHub profile</a></li>
-  <li><a href="https://www.linkedin.com/in/connor-monahan-a23318146/">My LinkedIn page</a></li>
-  <li>Email <a href="mailto:cmonahan@wustl.edu">cmonahan@wustl.edu</a></li>
-</ul>
-</div>
+![Connor Profile Picture](/images/profile.jpg)
+
+Hi, my name is Connor Monahan.
+
+I work at Tesla writing vehicle software. In a previous life, I was a student at Washington University in St. Louis. I have worked on a variety of computer vision and embedded/real-time software applications.
+
+Follow me on
+
+- [My GitHub profile](https://github.com/cmastudios)
+- [My LinkedIn page](https://www.linkedin.com/in/connor-monahan-a23318146/)
+- Email [cma2714@gmail.com](mailto:cma2714@gmail.com)
 
